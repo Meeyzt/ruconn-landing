@@ -20,39 +20,39 @@ app.innerHTML = `
       <nav class="topnav" aria-label="Ana navigasyon">
         <a href="#neden">Ürün</a>
         <a href="#journey">Akış</a>
-        <a href="#kulupler">Kulüpler</a>
-        <a href="#cta">Demo</a>
+        <a href="#kulupler">Topluluklar</a>
+        <a href="#cta">İletişim</a>
       </nav>
 
-      <a class="button button-ghost" href="#cta">Demo al</a>
+      <a class="button button-ghost" href="#cta">Bize ulaşın</a>
     </header>
 
     <main>
-      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Başlangıç" data-route-title="Şehir açılıyor" data-route-copy="Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.">
+      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Başlangıç" data-route-title="Topluluk ritmi kuruluyor" data-route-copy="Kulüp yöneticisi ilk ekranda keşif, iletişim ve organizasyonu tek akışta görür; rota daha başlamadan netleşir.">
         <div class="hero-copy reveal-up">
-          <p class="eyebrow">Koşu topluluğu işletim sistemi</p>
-          <h1>Koşuyu bul. Katıl. Bağlı kal.</h1>
+          <p class="eyebrow">Koşu ve yürüyüş toplulukları için operasyon katmanı</p>
+          <h1>Topluluğu canlı tut. Katılımı büyüt. Organizasyonu sadeleştir.</h1>
           <p class="hero-text">
-            Ruconn, koşucu için keşfi ve katılımı; kulüp için görünürlüğü ve topluluk ritmini tek akışta toplar.
+            Ruconn; koşu kulüpleri, yürüyüş toplulukları ve community yöneticileri için etkinlik öncesi, anı ve sonrasındaki iletişimi tek akışta toparlar.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo planla</a>
-            <a class="button button-secondary" href="#journey">Rotayı gör</a>
+            <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Bize%20Ulasin">Bize ulaşın</a>
+            <a class="button button-secondary" href="#journey">Akışı inceleyin</a>
           </div>
 
           <div class="hero-proof">
             <div>
-              <strong>14 koşu</strong>
-              <span>Bu hafta canlı rotada</span>
+              <strong>14 etkinlik</strong>
+              <span>Bu hafta tek ritimde yayında</span>
             </div>
             <div>
-              <strong>8 kulüp</strong>
-              <span>Tek ritimde görünür</span>
+              <strong>8 topluluk</strong>
+              <span>Öncesi ve sonrası birlikte yönetiyor</span>
             </div>
             <div>
               <strong>1 akış</strong>
-              <span>Keşfet → katıl → geri dön</span>
+              <span>Duyuru → katılım → geri dönüş</span>
             </div>
           </div>
         </div>
@@ -69,8 +69,8 @@ app.innerHTML = `
             <div class="route-overlay" aria-hidden="true">
               <div class="route-overlay-copy">
                 <small id="route-overlay-label">Başlangıç</small>
-                <strong id="route-overlay-title">Şehir açılıyor</strong>
-                <p id="route-overlay-copy">Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.</p>
+                <strong id="route-overlay-title">Topluluk ritmi kuruluyor</strong>
+                <p id="route-overlay-copy">Kulüp yöneticisi ilk ekranda keşif, iletişim ve organizasyonu tek akışta görür; rota daha başlamadan netleşir.</p>
               </div>
               <div class="route-overlay-progress">
                 <div class="route-progress-meta">
@@ -82,28 +82,28 @@ app.innerHTML = `
               <div class="route-overlay-checkpoints" id="route-overlay-checkpoints">
                 <span class="is-active">Başlangıç</span>
                 <span>Keşif</span>
-                <span>Katılım</span>
-                <span>Bağlılık</span>
-                <span>Demo</span>
+                <span>Koordinasyon</span>
+                <span>Süreklilik</span>
+                <span>İletişim</span>
               </div>
             </div>
             <div class="hero-hud hud-bottom">
               <div>
                 <small>Aktif yüzey</small>
-                <strong>Koşu, kulüp, topluluk aynı ekran</strong>
+                <strong>Etkinlik, kulüp ve topluluk iletişimi aynı ekranda</strong>
               </div>
               <div>
                 <small>Ruconn mantığı</small>
-                <strong>Öncesi, anı ve sonrası kopmaz</strong>
+                <strong>Öncesi, anı ve sonrası tek ritimde kalır</strong>
               </div>
             </div>
             <div class="hero-float-card hero-float-a">
-              <small>KEŞFET</small>
-              <strong>Yakındaki koşuyu hızla seç</strong>
+              <small>KOORDİNASYON</small>
+              <strong>Duyurudan buluşma anına kadar akış netleşir</strong>
             </div>
             <div class="hero-float-card hero-float-b">
-              <small>TOPLULUK</small>
-              <strong>Bir etkinlikten kalıcı ritme geç</strong>
+              <small>SÜREKLİLİK</small>
+              <strong>Etkinlik bitse de topluluk sohbeti devam eder</strong>
             </div>
           </div>
         </div>
@@ -112,71 +112,71 @@ app.innerHTML = `
       <section class="momentum-strip reveal-up" aria-label="Öne çıkan değerler">
         <article>
           <span class="signal-kicker">Keşif</span>
-          <strong>Doğru koşu, tek bakışta.</strong>
-          <p>Tempo, rota, kulüp ve enerji net görünür.</p>
+          <strong>Doğru etkinliği doğru topluluğa çıkar.</strong>
+          <p>Rota, tempo, format ve kulüp tonu tek bakışta netleşir.</p>
         </article>
         <article>
-          <span class="signal-kicker">Katılım</span>
-          <strong>RSVP değil, gerçek hazırlık.</strong>
-          <p>Kim geliyor ve ortam nasıl, önceden hissedilir.</p>
+          <span class="signal-kicker">Koordinasyon</span>
+          <strong>Mesaj karmaşasını akışa çevirir.</strong>
+          <p>Etkinlik öncesi bilgi paylaşımı ve katılım sinyalleri tek yerde toplanır.</p>
         </article>
         <article>
           <span class="signal-kicker">Süreklilik</span>
-          <strong>Koşu biter, bağ bitmez.</strong>
-          <p>Tek seferlik etkinlik yerine tekrar eden topluluk ritmi kurulur.</p>
+          <strong>Buluşma biter, topluluk yaşamaya devam eder.</strong>
+          <p>Etkinlik sonrası iletişim korunur, geri dönüş ve tekrar katılım artar.</p>
         </article>
       </section>
 
       <section id="journey" class="section route-journey" aria-label="Ruconn rota akışı">
         <div class="section-heading section-heading-wide reveal-up">
           <p class="eyebrow">Kaydırma boyunca rota</p>
-          <h2>Açılıştan demo çağrısına tek bir koşu rotası.</h2>
-          <p>Kullanıcı aşağı indikçe rota ilerler; her bölüm yeni bir kontrol noktası gibi davranır. Görsel sahne hareket eder ama arayüz temiz ve üst seviye kalır.</p>
+          <h2>İlk duyurudan kalıcı topluluk ritmine uzanan tek akış.</h2>
+          <p>Sayfa aşağı indikçe rota ilerler; her bölüm bir topluluk yöneticisinin keşif, koordinasyon, katılım ve süreklilik adımlarını temsil eder.</p>
         </div>
 
         <div class="journey-layout">
           <div class="journey-intro reveal-up">
             <span class="journey-kicker">Kontrol noktası mantığı</span>
-            <p>Her blok yeni bir eşik. Canlı rota sahnesi sabit kalır, ilerleme hissi kaydırmayla derinleşir.</p>
+            <p>Her blok yeni bir operasyon eşiği. Canlı rota sahnesi sabit kalır, topluluğu canlı tutan akış kaydırmayla derinleşir.</p>
           </div>
 
           <div class="journey-checkpoints">
-            <article id="neden" class="route-checkpoint route-step reveal-up" data-route-step="1" data-route-label="Keşif" data-route-title="Doğru koşu öne çıkıyor" data-route-copy="Rota, tempo ve topluluk tonu tek bakışta anlaşılır; keşif sürtünmesizleşir.">
+            <article id="neden" class="route-checkpoint route-step reveal-up" data-route-step="1" data-route-label="Keşif" data-route-title="Doğru topluluk doğru üyeye çıkıyor" data-route-copy="Rota, tempo, format ve topluluk tonu tek bakışta anlaşılır; keşif kulüp ve yeni katılımcı için sürtünmesizleşir.">
               <span class="checkpoint-index">01</span>
               <div>
                 <p class="eyebrow">Keşif</p>
-                <h3>Etkinlik ekranından daha fazlası.</h3>
-                <p>Ruconn, koşunun etrafındaki sosyal akışı daha net, daha düzenli ve daha rafine bir deneyime çevirir.</p>
+                <h3>Etkinliği listelemekten fazlası.</h3>
+                <p>Ruconn, koşu ve yürüyüş topluluklarının kendini daha net anlatmasını sağlar; doğru kişi doğru etkinliği daha kolay bulur.</p>
               </div>
             </article>
 
-            <article id="deneyim" class="route-checkpoint route-step reveal-up" data-route-step="2" data-route-label="Katılım" data-route-title="Hazırlık sosyal olarak netleşiyor" data-route-copy="Kim geliyor, his nasıl, giriş ne kadar kolay; tüm katılım sinyalleri görünür oluyor.">
+            <article id="deneyim" class="route-checkpoint route-step reveal-up" data-route-step="2" data-route-label="Koordinasyon" data-route-title="Hazırlık ve iletişim tek yüzeyde toplanıyor" data-route-copy="Kim geliyor, hangi bilgi paylaşıldı, giriş ne kadar kolay; tüm koordinasyon sinyalleri görünür oluyor.">
               <span class="checkpoint-index">02</span>
               <div>
-                <p class="eyebrow">Katılım</p>
-                <h3>Mesaj karmaşası yerine net hazırlık.</h3>
-                <p>Koşu öncesi katılım sinyalleri tek yüzeyde toplanır; insanlar gelmeden önce birbirini hisseder.</p>
+                <p class="eyebrow">Koordinasyon</p>
+                <h3>Etkinlik öncesi hazırlık dağılmaz.</h3>
+                <p>Duyuru, katılım sinyalleri ve önemli güncellemeler tek akışta birleşir; yöneticiler daha az eforla daha net organizasyon yürütür.</p>
               </div>
             </article>
 
-            <article id="kulupler" class="route-checkpoint route-step reveal-up" data-route-step="3" data-route-label="Bağlılık" data-route-title="Tek koşu topluluk ritmine dönüşüyor" data-route-copy="Kulüp için görünürlük güçleniyor; kullanıcı için bir sonraki koşuya geri dönmek doğal hale geliyor.">
+            <article id="kulupler" class="route-checkpoint route-step reveal-up" data-route-step="3" data-route-label="Süreklilik" data-route-title="Tek etkinlik kalıcı topluluk ritmine dönüşüyor" data-route-copy="Kulüp için iletişim sürer, üyeler için geri dönmek kolaylaşır; bir sonraki etkinliğin zemini hazır kalır.">
               <span class="checkpoint-index">03</span>
               <div>
-                <p class="eyebrow">Bağlılık</p>
-                <h3>Kulüp ritmi daha sürdürülebilir hale gelir.</h3>
-                <p>İlk katılım bir ilişki başlangıcına döner; seri koşular ve kulüp akışı daha kontrollü ilerler.</p>
+                <p class="eyebrow">Süreklilik</p>
+                <h3>Topluluk sadece etkinlik gününde yaşamaz.</h3>
+                <p>Etkinlik sonrası konuşmalar, fotoğraflar, takip ve bir sonraki buluşma çağrıları kopmadan devam eder; katılım döngüsü güçlenir.</p>
               </div>
             </article>
 
-            <article id="cta" class="route-checkpoint route-step reveal-up route-checkpoint-cta" data-route-step="4" data-route-label="Demo" data-route-title="Rota demo noktasında tamamlanıyor" data-route-copy="Hero’da başlayan çizgi burada kapanır: keşif, katılım ve devamlılık artık tek üründe toplanır.">
+            <article id="cta" class="route-checkpoint route-step reveal-up route-checkpoint-cta" data-route-step="4" data-route-label="İletişim" data-route-title="Rota iletişim noktasında tamamlanıyor" data-route-copy="Hero’da başlayan çizgi burada kapanır: keşif, koordinasyon ve süreklilik artık topluluk yöneticileri için tek üründe toplanır.">
               <span class="checkpoint-index">04</span>
               <div>
-                <p class="eyebrow">Demo</p>
-                <h3>Bu akışı kulübüne taşı.</h3>
-                <p>Ruconn’u sahada birlikte keskinleştirmek için tanıtım görüşmesi planlayalım.</p>
+                <p class="eyebrow">İletişim</p>
+                <h3>Bu akışı topluluğunuza uyarlayalım.</h3>
+                <p>Koşu kulübünüz, yürüyüş topluluğunuz veya community programınız için Ruconn’un nasıl çalışacağını birlikte konuşalım.</p>
                 <div class="cta-actions checkpoint-actions">
-                  <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo planla</a>
-                  <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Erken%20Erişim">Erken erişim iste</a>
+                  <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Bize%20Ulasin">Bize ulaşın</a>
+                  <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Topluluk%20Bilgisi">Topluluğunuzu anlatın</a>
                 </div>
               </div>
             </article>
@@ -187,75 +187,75 @@ app.innerHTML = `
       <section class="section why-section">
         <div class="why-grid">
           <article class="why-card why-card-large reveal-up feature-card">
-            <span>01 · Koşucu</span>
-            <h3>Bul ve hemen katıl.</h3>
-            <p>Şehirdeki doğru koşuyu seç, hissini anla, topluluğa düşük sürtünmeyle gir.</p>
+            <span>01 · Topluluk yöneticisi</span>
+            <h3>Programı görünür ve anlaşılır kıl.</h3>
+            <p>Şehirdeki doğru kitleye doğru etkinliği ulaştır, formatı net anlat, katılım kapısını sadeleştir.</p>
           </article>
           <article class="why-card reveal-up feature-card">
-            <span>02 · Topluluk katmanı</span>
-            <h3>Dağınık mesaj yerine net akış.</h3>
-            <p>Duyuru, katılım ve devamlılık tek yerde akar.</p>
+            <span>02 · İletişim katmanı</span>
+            <h3>Dağınık mesaj yerine süreklilik üreten akış.</h3>
+            <p>Duyuru, hatırlatma, katılım sinyalleri ve etkinlik sonrası iletişim tek yerde akar.</p>
           </article>
           <article class="why-card reveal-up feature-card accent-card">
-            <span>03 · Kulüp</span>
-            <h3>Daha görünür, daha kontrollü.</h3>
-            <p>Operasyon yükü azalır; topluluk ritmi güçlenir.</p>
+            <span>03 · Kulüp ve topluluk</span>
+            <h3>Daha yüksek katılım, daha sakin operasyon.</h3>
+            <p>Organizasyon yükü azalır; üyeler geri döner, topluluk ritmi güçlenir.</p>
           </article>
         </div>
 
         <div class="why-rail">
           <div class="why-rail-item reveal-up">
             <strong>Öncesi</strong>
-            <p>Belirsizlik azalır.</p>
+            <p>Duyurular ve hazırlık netleşir.</p>
           </div>
           <div class="why-rail-item reveal-up">
             <strong>Anı</strong>
-            <p>Daha sıcak katılım hissi.</p>
+            <p>Katılım daha sıcak ve öngörülebilir olur.</p>
           </div>
           <div class="why-rail-item reveal-up">
             <strong>Sonrası</strong>
-            <p>Bir sonraki koşuya dönüş artar.</p>
+            <p>Topluluk bağı korunur, geri dönüş artar.</p>
           </div>
         </div>
       </section>
 
       <section class="section experience-section">
         <div class="section-heading reveal-up narrow">
-          <p class="eyebrow">Deneyim akışı</p>
-          <h2>Üç net adım. Tek üst seviye akış.</h2>
+          <p class="eyebrow">Operasyon akışı</p>
+          <h2>Üç net adım. Topluluk yöneticisi için tek üst seviye akış.</h2>
         </div>
 
         <div class="experience-stack">
           <article class="experience-card experience-card-a reveal-up">
             <div class="experience-index">01</div>
-            <h3>Bul</h3>
-            <p>Koşuları filtrelemeden bile doğru hissi yakala.</p>
+            <h3>Yayınla</h3>
+            <p>Etkinliğini doğru bağlamla görünür kıl.</p>
             <ul>
-              <li>Rota ve tempo görünürlüğü</li>
-              <li>Kulüp tonu ve format sinyali</li>
-              <li>Yeni gelen için kolay giriş</li>
+              <li>Rota, tempo ve format görünürlüğü</li>
+              <li>Kulüp tonu ve topluluk sinyalleri</li>
+              <li>Yeni üyeler için anlaşılır giriş</li>
             </ul>
           </article>
 
           <article class="experience-card experience-card-b reveal-up">
             <div class="experience-index">02</div>
-            <h3>Katıl</h3>
-            <p>Mesaj karmaşası olmadan hazırlan.</p>
+            <h3>Koordine et</h3>
+            <p>Etkinlik öncesi iletişimi ve katılımı tek yerde toparla.</p>
             <ul>
               <li>Kim geliyor, önceden gör</li>
-              <li>Etkinlik öncesi sosyal ısınma</li>
-              <li>Sade katılım akışı</li>
+              <li>Hatırlatmaları ve güncellemeleri düzenle</li>
+              <li>Organizasyon stresini azalt</li>
             </ul>
           </article>
 
           <article class="experience-card experience-card-c reveal-up">
             <div class="experience-index">03</div>
             <h3>Sürdür</h3>
-            <p>Tek koşudan düzenli topluluğa geç.</p>
+            <p>Etkinlik sonrasını da topluluğun bir parçası yap.</p>
             <ul>
-              <li>Etkinlik sonrası bağın korunması</li>
-              <li>Seri koşular için ritim</li>
-              <li>Daha güçlü geri dönüş oranı</li>
+              <li>Etkinlik sonrası iletişimi canlı tut</li>
+              <li>Bir sonraki buluşmaya dönüşü artır</li>
+              <li>Düzenli ritim ve aidiyet kur</li>
             </ul>
           </article>
         </div>
@@ -265,21 +265,21 @@ app.innerHTML = `
         <div class="metrics-panel reveal-up">
           <div class="metrics-copy">
             <p class="eyebrow">Ne satıyoruz?</p>
-            <h2>Daha çok katılım. Daha güçlü topluluk.</h2>
-            <p>Kullanıcı için giriş kolaylaşır; kulüp için görünürlük ve devamlılık güçlenir.</p>
+            <h2>Daha güçlü katılım. Daha canlı topluluk. Daha kolay organizasyon.</h2>
+            <p>Ruconn, topluluk yöneticisinin keşif, iletişim ve devamlılık yükünü tek akışta toparlar.</p>
           </div>
           <div class="metrics-list">
             <div>
               <strong>01</strong>
-              <span>Keşif → katılım → geri dönüş</span>
+              <span>Keşif → koordinasyon → geri dönüş</span>
             </div>
             <div>
               <strong>02</strong>
-              <span>Görünürlük → katılım → devamlılık</span>
+              <span>Duyuru → katılım → etkinlik sonrası iletişim</span>
             </div>
             <div>
               <strong>03</strong>
-              <span>Tek mesaj: koşu etrafındaki ritmi toparla</span>
+              <span>Tek mesaj: topluluğu canlı tutarken organizasyonu sadeleştir</span>
             </div>
           </div>
         </div>
@@ -463,8 +463,8 @@ const setupRouteScene = () => {
   setProgress(0)
   setOverlay({
     label: 'Başlangıç',
-    title: 'Şehir açılıyor',
-    copy: 'Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.',
+    title: 'Topluluk ritmi kuruluyor',
+    copy: 'Kulüp yöneticisi ilk ekranda keşif, iletişim ve organizasyonu tek akışta görür; rota daha başlamadan netleşir.',
     index: 0
   })
 

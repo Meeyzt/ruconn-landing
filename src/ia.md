@@ -2,7 +2,7 @@
 
 ## Ana hedef
 Ruconn’u bir "etkinlik listesi" gibi değil, running culture altyapısı gibi konumlamak.
-İlk ekranda premium his, ikinci blokta ürün vaadi, devamında discovery + community + club operations üçlüsünü netleştirmek.
+İlk ekranda premium his, ikinci blokta ürün vaadi, devamında discovery + koordinasyon + club operations üçlüsünü özellikle koşu kulüpleri, yürüyüş toplulukları ve community yöneticileri için netleştirmek.
 
 ## Anlatı stratejisi
 Landing katalog dili kullanmaz. Özellik sıralamak yerine şu soruyu satar:
@@ -10,20 +10,20 @@ Landing katalog dili kullanmaz. Özellik sıralamak yerine şu soruyu satar:
 **"Ruconn neden şehirdeki koşu deneyimini daha güçlü hale getiriyor?"**
 
 Cevap üç katmanda verilir:
-1. **Discovery** → Koşucu doğru akışı bulur.
-2. **Community** → Katılım aidiyete dönüşür.
-3. **Club operations** → Kulüp tarafı daha sakin ve daha ölçeklenebilir çalışır.
+1. **Discovery** → Topluluk doğru kişiye doğru etkinliği gösterir.
+2. **Coordination** → Etkinlik öncesi iletişim ve hazırlık dağılmaz.
+3. **Community continuity / Club operations** → Etkinlik sonrası bağ korunur, kulüp tarafı daha sakin ve daha ölçeklenebilir çalışır.
 
 ## Sayfa akışı
 1. **Hero**
    - Kısa ve iddialı başlık
-   - Running community platform vurgusu
-   - İki CTA
+   - Running / walking community operations platform vurgusu
+   - İki CTA, ana aksiyon "Bize ulaşın"
    - Soyut ama ürün hissi veren ambient panel
 
 2. **Signal band**
    - 3 temel değer alanı
-   - Keşif / topluluk bağı / operasyon sakinliği
+   - Keşif / koordinasyon / operasyon sakinliği
 
 3. **Ürün vaadi**
    - Problemi tanımlar
@@ -31,8 +31,8 @@ Cevap üç katmanda verilir:
    - 3 katmanlı değer kartları
 
 4. **Platform akışı**
-   - Keşfet → Bağlan → Yönet
-   - Kullanıcı ve kulüp perspektifi aynı blokta bağlanır
+   - Yayınla → Koordine et → Sürdür
+   - Üye deneyimi ile kulüp operasyonu aynı blokta bağlanır
 
 5. **Kulüp operasyon bölümü**
    - Tekrarlı iş yükünü azaltma
@@ -44,12 +44,12 @@ Cevap üç katmanda verilir:
    - Mesaj, sistem ve motion prensiplerini özetler
 
 7. **Final CTA**
-   - Demo ve erken erişim çağrısı
-   - Partner / kulüp odağı
+   - İletişim ve topluluk anlatımı çağrısı
+   - Partner / kulüp / topluluk yöneticisi odağı
 
 ## Tasarım notları
 - Koyu, atletik ve premium yüzey dili
 - Sıcak metalik altın + derin kırmızı vurgu
 - Geniş boşluk, büyük tipografi, sakin ama kontrollü hareket
 - GSAP / ScrollTrigger ile dikkat dağıtmayan reveal ve ambient motion
-- Three.js bilinçli olarak kullanılmadı; bu sürümde değer / performans dengesi için gerekmedi
+- Three.js rota sahnesi korunur; positioning değişir, görsel yön korunur
