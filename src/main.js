@@ -7,6 +7,8 @@ const app = document.querySelector('#app')
 
 gsap.registerPlugin(ScrollTrigger)
 
+document.documentElement.classList.add('js-enhanced')
+
 app.innerHTML = `
   <div class="page-shell">
     <header class="topbar">
@@ -26,9 +28,9 @@ app.innerHTML = `
     </header>
 
     <main>
-      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Start" data-route-title="Şehir açılıyor" data-route-copy="Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.">
+      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Başlangıç" data-route-title="Şehir açılıyor" data-route-copy="Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.">
         <div class="hero-copy reveal-up">
-          <p class="eyebrow">Running community OS</p>
+          <p class="eyebrow">Koşu topluluğu işletim sistemi</p>
           <h1>Koşuyu bul. Katıl. Bağlı kal.</h1>
           <p class="hero-text">
             Ruconn, koşucu için keşfi ve katılımı; kulüp için görünürlüğü ve topluluk ritmini tek akışta toplar.
@@ -42,7 +44,7 @@ app.innerHTML = `
           <div class="hero-proof">
             <div>
               <strong>14 koşu</strong>
-              <span>Bu hafta canlı akışta</span>
+              <span>Bu hafta canlı rotada</span>
             </div>
             <div>
               <strong>8 kulüp</strong>
@@ -50,7 +52,7 @@ app.innerHTML = `
             </div>
             <div>
               <strong>1 akış</strong>
-              <span>Discovery → join → return</span>
+              <span>Keşfet → katıl → geri dön</span>
             </div>
           </div>
         </div>
@@ -61,28 +63,28 @@ app.innerHTML = `
           <div class="hero-scene-shell route-stage-shell">
             <canvas id="route-canvas"></canvas>
             <div class="hero-hud hud-top route-summary-bar">
-              <span>LIVE ROUTE</span>
-              <span>İstanbul / cadence mode</span>
+              <span>CANLI ROTA</span>
+              <span>İstanbul / ritim modu</span>
             </div>
             <div class="route-overlay" aria-hidden="true">
               <div class="route-overlay-copy">
-                <small id="route-overlay-label">Start</small>
+                <small id="route-overlay-label">Başlangıç</small>
                 <strong id="route-overlay-title">Şehir açılıyor</strong>
                 <p id="route-overlay-copy">Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.</p>
               </div>
               <div class="route-overlay-progress">
                 <div class="route-progress-meta">
-                  <span>Route progress</span>
+                  <span>Rota ilerleyişi</span>
                   <strong id="route-progress-value">00%</strong>
                 </div>
                 <div class="route-progress-track"><span id="route-progress-bar"></span></div>
               </div>
               <div class="route-overlay-checkpoints" id="route-overlay-checkpoints">
-                <span class="is-active">Start</span>
-                <span>Discover</span>
-                <span>Join</span>
-                <span>Belong</span>
-                <span>CTA</span>
+                <span class="is-active">Başlangıç</span>
+                <span>Keşif</span>
+                <span>Katılım</span>
+                <span>Bağlılık</span>
+                <span>Demo</span>
               </div>
             </div>
             <div class="hero-hud hud-bottom">
@@ -96,11 +98,11 @@ app.innerHTML = `
               </div>
             </div>
             <div class="hero-float-card hero-float-a">
-              <small>DISCOVER</small>
+              <small>KEŞFET</small>
               <strong>Yakındaki koşuyu hızla seç</strong>
             </div>
             <div class="hero-float-card hero-float-b">
-              <small>COMMUNITY</small>
+              <small>TOPLULUK</small>
               <strong>Bir etkinlikten kalıcı ritme geç</strong>
             </div>
           </div>
@@ -127,51 +129,51 @@ app.innerHTML = `
 
       <section id="journey" class="section route-journey" aria-label="Ruconn rota akışı">
         <div class="section-heading section-heading-wide reveal-up">
-          <p class="eyebrow">Scroll progress route</p>
-          <h2>Hero’dan CTA’ya tek bir koşu rotası.</h2>
-          <p>Kullanıcı aşağı indikçe rota ilerler; her section yeni bir checkpoint gibi davranır. Görsel sahne hareket eder ama arayüz temiz ve premium kalır.</p>
+          <p class="eyebrow">Kaydırma boyunca rota</p>
+          <h2>Açılıştan demo çağrısına tek bir koşu rotası.</h2>
+          <p>Kullanıcı aşağı indikçe rota ilerler; her bölüm yeni bir kontrol noktası gibi davranır. Görsel sahne hareket eder ama arayüz temiz ve üst seviye kalır.</p>
         </div>
 
         <div class="journey-layout">
           <div class="journey-intro reveal-up">
-            <span class="journey-kicker">Checkpoint logic</span>
-            <p>Her blok yeni bir eşik. Live route sahnesi aynı kalır, ilerleme hissi scroll ile derinleşir.</p>
+            <span class="journey-kicker">Kontrol noktası mantığı</span>
+            <p>Her blok yeni bir eşik. Canlı rota sahnesi sabit kalır, ilerleme hissi kaydırmayla derinleşir.</p>
           </div>
 
           <div class="journey-checkpoints">
-            <article id="neden" class="route-checkpoint route-step reveal-up" data-route-step="1" data-route-label="Discover" data-route-title="Doğru koşu öne çıkıyor" data-route-copy="Rota, tempo ve topluluk tonu tek bakışta anlaşılır; keşif sürtünmesizleşir.">
+            <article id="neden" class="route-checkpoint route-step reveal-up" data-route-step="1" data-route-label="Keşif" data-route-title="Doğru koşu öne çıkıyor" data-route-copy="Rota, tempo ve topluluk tonu tek bakışta anlaşılır; keşif sürtünmesizleşir.">
               <span class="checkpoint-index">01</span>
               <div>
-                <p class="eyebrow">Discover</p>
+                <p class="eyebrow">Keşif</p>
                 <h3>Etkinlik ekranından daha fazlası.</h3>
-                <p>Ruconn, koşunun etrafındaki sosyal akışı daha net, daha düzenli ve daha premium bir deneyime çevirir.</p>
+                <p>Ruconn, koşunun etrafındaki sosyal akışı daha net, daha düzenli ve daha rafine bir deneyime çevirir.</p>
               </div>
             </article>
 
-            <article id="deneyim" class="route-checkpoint route-step reveal-up" data-route-step="2" data-route-label="Join" data-route-title="Hazırlık sosyal olarak netleşiyor" data-route-copy="Kim geliyor, his nasıl, giriş ne kadar kolay; tüm katılım sinyalleri görünür oluyor.">
+            <article id="deneyim" class="route-checkpoint route-step reveal-up" data-route-step="2" data-route-label="Katılım" data-route-title="Hazırlık sosyal olarak netleşiyor" data-route-copy="Kim geliyor, his nasıl, giriş ne kadar kolay; tüm katılım sinyalleri görünür oluyor.">
               <span class="checkpoint-index">02</span>
               <div>
-                <p class="eyebrow">Join</p>
+                <p class="eyebrow">Katılım</p>
                 <h3>Mesaj karmaşası yerine net hazırlık.</h3>
                 <p>Koşu öncesi katılım sinyalleri tek yüzeyde toplanır; insanlar gelmeden önce birbirini hisseder.</p>
               </div>
             </article>
 
-            <article id="kulupler" class="route-checkpoint route-step reveal-up" data-route-step="3" data-route-label="Belong" data-route-title="Tek koşu topluluk ritmine dönüşüyor" data-route-copy="Kulüp için görünürlük güçleniyor; kullanıcı için bir sonraki koşuya geri dönmek doğal hale geliyor.">
+            <article id="kulupler" class="route-checkpoint route-step reveal-up" data-route-step="3" data-route-label="Bağlılık" data-route-title="Tek koşu topluluk ritmine dönüşüyor" data-route-copy="Kulüp için görünürlük güçleniyor; kullanıcı için bir sonraki koşuya geri dönmek doğal hale geliyor.">
               <span class="checkpoint-index">03</span>
               <div>
-                <p class="eyebrow">Belong</p>
+                <p class="eyebrow">Bağlılık</p>
                 <h3>Kulüp ritmi daha sürdürülebilir hale gelir.</h3>
                 <p>İlk katılım bir ilişki başlangıcına döner; seri koşular ve kulüp akışı daha kontrollü ilerler.</p>
               </div>
             </article>
 
-            <article id="cta" class="route-checkpoint route-step reveal-up route-checkpoint-cta" data-route-step="4" data-route-label="CTA" data-route-title="Rota demo noktasında tamamlanıyor" data-route-copy="Hero’da başlayan çizgi burada kapanır: keşif, katılım ve devamlılık artık tek üründe toplanır.">
+            <article id="cta" class="route-checkpoint route-step reveal-up route-checkpoint-cta" data-route-step="4" data-route-label="Demo" data-route-title="Rota demo noktasında tamamlanıyor" data-route-copy="Hero’da başlayan çizgi burada kapanır: keşif, katılım ve devamlılık artık tek üründe toplanır.">
               <span class="checkpoint-index">04</span>
               <div>
-                <p class="eyebrow">CTA</p>
+                <p class="eyebrow">Demo</p>
                 <h3>Bu akışı kulübüne taşı.</h3>
-                <p>Ruconn’u sahada birlikte keskinleştirmek için demo planlayalım.</p>
+                <p>Ruconn’u sahada birlikte keskinleştirmek için tanıtım görüşmesi planlayalım.</p>
                 <div class="cta-actions checkpoint-actions">
                   <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo planla</a>
                   <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Erken%20Erişim">Erken erişim iste</a>
@@ -190,7 +192,7 @@ app.innerHTML = `
             <p>Şehirdeki doğru koşuyu seç, hissini anla, topluluğa düşük sürtünmeyle gir.</p>
           </article>
           <article class="why-card reveal-up feature-card">
-            <span>02 · Community layer</span>
+            <span>02 · Topluluk katmanı</span>
             <h3>Dağınık mesaj yerine net akış.</h3>
             <p>Duyuru, katılım ve devamlılık tek yerde akar.</p>
           </article>
@@ -220,7 +222,7 @@ app.innerHTML = `
       <section class="section experience-section">
         <div class="section-heading reveal-up narrow">
           <p class="eyebrow">Deneyim akışı</p>
-          <h2>Üç net adım. Tek premium akış.</h2>
+          <h2>Üç net adım. Tek üst seviye akış.</h2>
         </div>
 
         <div class="experience-stack">
@@ -269,11 +271,11 @@ app.innerHTML = `
           <div class="metrics-list">
             <div>
               <strong>01</strong>
-              <span>Discovery → join → return</span>
+              <span>Keşif → katılım → geri dönüş</span>
             </div>
             <div>
               <strong>02</strong>
-              <span>Visibility → attendance → continuity</span>
+              <span>Görünürlük → katılım → devamlılık</span>
             </div>
             <div>
               <strong>03</strong>
@@ -460,7 +462,7 @@ const setupRouteScene = () => {
 
   setProgress(0)
   setOverlay({
-    label: 'Start',
+    label: 'Başlangıç',
     title: 'Şehir açılıyor',
     copy: 'Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.',
     index: 0
@@ -531,30 +533,40 @@ if (!reducedMotion) {
   })
 
   gsap.utils.toArray('.reveal-up').forEach((item) => {
-    gsap.from(item, {
-      y: 34,
-      opacity: 0,
-      duration: 0.88,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: item,
-        start: 'top 84%'
+    gsap.fromTo(item,
+      { y: 26, autoAlpha: 0 },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 0.82,
+        ease: 'power3.out',
+        clearProps: 'transform,opacity,visibility',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 88%',
+          once: true
+        }
       }
-    })
+    )
   })
 
   gsap.utils.toArray('.experience-card').forEach((card, index) => {
-    gsap.from(card, {
-      y: 54,
-      opacity: 0,
-      duration: 0.9,
-      delay: index * 0.05,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 80%'
+    gsap.fromTo(card,
+      { y: 30, autoAlpha: 0 },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 0.78,
+        delay: index * 0.04,
+        ease: 'power3.out',
+        clearProps: 'transform,opacity,visibility',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 88%',
+          once: true
+        }
       }
-    })
+    )
   })
 
   ScrollTrigger.create({
@@ -592,15 +604,22 @@ if (!reducedMotion) {
   })
 
   ScrollTrigger.create({
-    trigger: '.experience-stack',
-    start: 'top 75%',
-    end: 'bottom 75%',
+    trigger: '.experience-section',
+    start: 'top 72%',
+    end: 'bottom 68%',
     onUpdate: (self) => {
-      gsap.to('.experience-card-a', { y: self.progress * -12, duration: 0.35, overwrite: 'auto' })
-      gsap.to('.experience-card-b', { y: self.progress * -22, duration: 0.35, overwrite: 'auto' })
-      gsap.to('.experience-card-c', { y: self.progress * -32, duration: 0.35, overwrite: 'auto' })
+      gsap.to('.experience-card-a', { y: self.progress * -6, duration: 0.3, overwrite: 'auto' })
+      gsap.to('.experience-card-b', { y: self.progress * -12, duration: 0.3, overwrite: 'auto' })
+      gsap.to('.experience-card-c', { y: self.progress * -18, duration: 0.3, overwrite: 'auto' })
     }
   })
 } else {
+  document.querySelectorAll('.reveal-up, .experience-card').forEach((item) => {
+    item.style.opacity = '1'
+    item.style.visibility = 'visible'
+    item.style.transform = 'none'
+  })
   routeScene?.setProgress(0.22)
 }
+
+window.addEventListener('load', () => ScrollTrigger.refresh())
