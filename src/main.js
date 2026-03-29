@@ -18,41 +18,41 @@ app.innerHTML = `
       </a>
 
       <nav class="topnav" aria-label="Ana navigasyon">
-        <a href="#neden">Ürün</a>
-        <a href="#journey">Akış</a>
-        <a href="#kulupler">Topluluklar</a>
+        <a href="#platform">Platform</a>
+        <a href="#journey">Journey</a>
+        <a href="#community">Topluluklar</a>
         <a href="#cta">İletişim</a>
       </nav>
 
-      <a class="button button-ghost" href="#cta">Bize ulaşın</a>
+      <a class="button button-ghost" href="#cta">Demo isteyin</a>
     </header>
 
     <main>
-      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Başlangıç" data-route-title="Topluluk ritmi kuruluyor" data-route-copy="Kulüp yöneticisi ilk ekranda keşif, iletişim ve organizasyonu tek akışta görür; rota daha başlamadan netleşir.">
+      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Ruconn" data-route-title="Topluluk operasyonu tek yüzeyde" data-route-copy="Etkinliği yayınlamak, katılımı görmek, duyuruları yönetmek ve üyeyi geri getirmek aynı ürün akışında birleşir.">
         <div class="hero-copy reveal-up">
-          <p class="eyebrow">Koşu ve yürüyüş toplulukları için operasyon katmanı</p>
-          <h1>Topluluğu canlı tut. Katılımı büyüt. Organizasyonu sadeleştir.</h1>
+          <p class="eyebrow">Koşu kulüpleri ve yürüyüş toplulukları için community operations platformu</p>
+          <h1>Koşu kulübünüzün etkinlik, koordinasyon ve katılım akışını tek yerde yönetin.</h1>
           <p class="hero-text">
-            Ruconn; koşu kulüpleri, yürüyüş toplulukları ve community yöneticileri için etkinlik öncesi, anı ve sonrasındaki iletişimi tek akışta toparlar.
+            Ruconn; koşu kulüpleri, yürüyüş toplulukları ve event ekipleri için etkinlik discovery, organizasyon iletişimi ve tekrar katılım sürecini tek premium yüzeyde birleştirir.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Bize%20Ulasin">Bize ulaşın</a>
-            <a class="button button-secondary" href="#journey">Akışı inceleyin</a>
+            <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Kulübünüz için demo isteyin</a>
+            <a class="button button-secondary" href="#proof">Nasıl çalıştığını görün</a>
           </div>
 
           <div class="hero-proof">
             <div>
-              <strong>14 etkinlik</strong>
-              <span>Bu hafta tek ritimde yayında</span>
+              <strong>Daha net yayın</strong>
+              <span>Rota, pace, format ve seviye tek bakışta anlaşılır.</span>
             </div>
             <div>
-              <strong>8 topluluk</strong>
-              <span>Öncesi ve sonrası birlikte yönetiyor</span>
+              <strong>Daha sakin koordinasyon</strong>
+              <span>Hatırlatmalar, katılım sinyalleri ve güncellemeler aynı yerde kalır.</span>
             </div>
             <div>
-              <strong>1 akış</strong>
-              <span>Duyuru → katılım → geri dönüş</span>
+              <strong>Daha güçlü geri dönüş</strong>
+              <span>Etkinlik sonrası bağ korunur, bir sonraki buluşma hızlanır.</span>
             </div>
           </div>
         </div>
@@ -62,201 +62,251 @@ app.innerHTML = `
           <div class="hero-glow hero-glow-secondary"></div>
           <div class="hero-scene-shell route-stage-shell">
             <canvas id="route-canvas"></canvas>
-            <div class="hero-hud hud-top route-summary-bar">
-              <span>CANLI ROTA</span>
-              <span>İstanbul / ritim modu</span>
+
+            <div class="hero-panel hero-panel-top route-summary-bar">
+              <span>LIVE COMMUNITY FLOW</span>
+              <span>İstanbul · club mode</span>
             </div>
+
+            <div class="hero-heroic-copy">
+              <span>Discovery → coordination → retention</span>
+              <strong>Her etkinlik bir sonraki katılımı da hazırlar.</strong>
+            </div>
+
             <div class="route-overlay" aria-hidden="true">
               <div class="route-overlay-copy">
-                <small id="route-overlay-label">Başlangıç</small>
-                <strong id="route-overlay-title">Topluluk ritmi kuruluyor</strong>
-                <p id="route-overlay-copy">Kulüp yöneticisi ilk ekranda keşif, iletişim ve organizasyonu tek akışta görür; rota daha başlamadan netleşir.</p>
+                <small id="route-overlay-label">Ruconn</small>
+                <strong id="route-overlay-title">Topluluk operasyonu tek yüzeyde</strong>
+                <p id="route-overlay-copy">Etkinliği yayınlamak, katılımı görmek, duyuruları yönetmek ve üyeyi geri getirmek aynı ürün akışında birleşir.</p>
               </div>
               <div class="route-overlay-progress">
                 <div class="route-progress-meta">
-                  <span>Rota ilerleyişi</span>
+                  <span>Journey progress</span>
                   <strong id="route-progress-value">00%</strong>
                 </div>
                 <div class="route-progress-track"><span id="route-progress-bar"></span></div>
               </div>
               <div class="route-overlay-checkpoints" id="route-overlay-checkpoints">
-                <span class="is-active">Başlangıç</span>
-                <span>Keşif</span>
-                <span>Koordinasyon</span>
-                <span>Süreklilik</span>
-                <span>İletişim</span>
+                <span class="is-active">Platform</span>
+                <span>Discovery</span>
+                <span>Coordination</span>
+                <span>Event day</span>
+                <span>Retention</span>
               </div>
             </div>
-            <div class="hero-hud hud-bottom">
+
+            <div class="hero-panel hero-panel-bottom">
               <div>
-                <small>Aktif yüzey</small>
-                <strong>Etkinlik, kulüp ve topluluk iletişimi aynı ekranda</strong>
+                <small>Organizer value</small>
+                <strong>Daha az mesaj karmaşası, daha öngörülebilir katılım</strong>
               </div>
               <div>
-                <small>Ruconn mantığı</small>
-                <strong>Öncesi, anı ve sonrası tek ritimde kalır</strong>
+                <small>Member value</small>
+                <strong>Nereye, kimlerle, hangi tempoda geleceğini önceden bilir</strong>
               </div>
             </div>
+
             <div class="hero-float-card hero-float-a">
-              <small>KOORDİNASYON</small>
-              <strong>Duyurudan buluşma anına kadar akış netleşir</strong>
+              <small>CLUBS</small>
+              <strong>Haftalık akışı daha görünür ve tekrar edilebilir kılar</strong>
             </div>
             <div class="hero-float-card hero-float-b">
-              <small>SÜREKLİLİK</small>
-              <strong>Etkinlik bitse de topluluk sohbeti devam eder</strong>
+              <small>EVENTS</small>
+              <strong>Tek buluşmayı kalıcı topluluk ritmine bağlar</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="momentum-strip reveal-up" aria-label="Öne çıkan değerler">
+      <section id="platform" class="signal-grid reveal-up" aria-label="Platform değerleri">
         <article>
-          <span class="signal-kicker">Keşif</span>
-          <strong>Doğru etkinliği doğru topluluğa çıkar.</strong>
-          <p>Rota, tempo, format ve kulüp tonu tek bakışta netleşir.</p>
+          <span class="signal-kicker">01 · Discovery</span>
+          <strong>Doğru etkinliği doğru üyeye daha hızlı ulaştırır.</strong>
+          <p>Koşu, yürüyüş, pace, rota zorluğu ve topluluk tonu daha net görünür olur.</p>
         </article>
         <article>
-          <span class="signal-kicker">Koordinasyon</span>
-          <strong>Mesaj karmaşasını akışa çevirir.</strong>
-          <p>Etkinlik öncesi bilgi paylaşımı ve katılım sinyalleri tek yerde toplanır.</p>
+          <span class="signal-kicker">02 · Coordination</span>
+          <strong>Etkinlik öncesi operasyonu tek akışta toplar.</strong>
+          <p>Duyurular, katılım görünürlüğü, son dakika güncellemeleri ve yönlendirmeler dağılmaz.</p>
         </article>
         <article>
-          <span class="signal-kicker">Süreklilik</span>
-          <strong>Buluşma biter, topluluk yaşamaya devam eder.</strong>
-          <p>Etkinlik sonrası iletişim korunur, geri dönüş ve tekrar katılım artar.</p>
+          <span class="signal-kicker">03 · Retention</span>
+          <strong>Katılan üyeyi bir sonraki etkinliğe daha kolay taşır.</strong>
+          <p>Etkinlik sonrası bağ korunur; topluluk hafızası ve tekrar katılım kuvvetlenir.</p>
         </article>
       </section>
 
-      <section id="journey" class="section route-journey" aria-label="Ruconn rota akışı">
-        <div class="section-heading section-heading-wide reveal-up">
-          <p class="eyebrow">Kaydırma boyunca rota</p>
-          <h2>İlk duyurudan kalıcı topluluk ritmine uzanan tek akış.</h2>
-          <p>Sayfa aşağı indikçe rota ilerler; her bölüm bir topluluk yöneticisinin keşif, koordinasyon, katılım ve süreklilik adımlarını temsil eder.</p>
+      <section id="proof" class="section proof-section">
+        <div class="section-heading reveal-up section-heading-wide">
+          <p class="eyebrow">Ürün nasıl değer üretir?</p>
+          <h2>Chat karmaşasını azaltan, etkinliği daha anlaşılır yapan ve tekrar katılımı güçlendiren tek akış.</h2>
+          <p>Ruconn, kulüp yöneticisinin sürekli açıklama yaptığı dağınık akış yerine; etkinlik bilgisi, katılım sinyali, operasyon notları ve topluluk devamlılığını tek ürün mantığında toplar.</p>
         </div>
 
-        <div class="journey-layout">
-          <div class="journey-intro reveal-up">
-            <span class="journey-kicker">Kontrol noktası mantığı</span>
-            <p>Her blok yeni bir operasyon eşiği. Canlı rota sahnesi sabit kalır, topluluğu canlı tutan akış kaydırmayla derinleşir.</p>
-          </div>
-
-          <div class="journey-checkpoints">
-            <article id="neden" class="route-checkpoint route-step reveal-up" data-route-step="1" data-route-label="Keşif" data-route-title="Doğru topluluk doğru üyeye çıkıyor" data-route-copy="Rota, tempo, format ve topluluk tonu tek bakışta anlaşılır; keşif kulüp ve yeni katılımcı için sürtünmesizleşir.">
-              <span class="checkpoint-index">01</span>
-              <div>
-                <p class="eyebrow">Keşif</p>
-                <h3>Etkinliği listelemekten fazlası.</h3>
-                <p>Ruconn, koşu ve yürüyüş topluluklarının kendini daha net anlatmasını sağlar; doğru kişi doğru etkinliği daha kolay bulur.</p>
+        <div class="proof-grid">
+          <article class="proof-card proof-card-wide reveal-up">
+            <div class="proof-card-head">
+              <span>Etkinlik görünümü</span>
+              <strong>Üye daha gelmeden neyle karşılaşacağını anlar.</strong>
+            </div>
+            <div class="proof-event-shell" aria-label="Örnek etkinlik kartı">
+              <div class="proof-event-top">
+                <span>Salı akşam koşusu</span>
+                <span>12 kişi geliyor</span>
               </div>
-            </article>
-
-            <article id="deneyim" class="route-checkpoint route-step reveal-up" data-route-step="2" data-route-label="Koordinasyon" data-route-title="Hazırlık ve iletişim tek yüzeyde toplanıyor" data-route-copy="Kim geliyor, hangi bilgi paylaşıldı, giriş ne kadar kolay; tüm koordinasyon sinyalleri görünür oluyor.">
-              <span class="checkpoint-index">02</span>
-              <div>
-                <p class="eyebrow">Koordinasyon</p>
-                <h3>Etkinlik öncesi hazırlık dağılmaz.</h3>
-                <p>Duyuru, katılım sinyalleri ve önemli güncellemeler tek akışta birleşir; yöneticiler daha az eforla daha net organizasyon yürütür.</p>
+              <h3>Caddebostan tempo koşusu</h3>
+              <p>Orta tempo · 6 km · başlangıç noktası net · yeni katılımcıya açık</p>
+              <div class="proof-tags">
+                <span>6K</span>
+                <span>Orta tempo</span>
+                <span>Yeni katılımcıya uygun</span>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <article id="kulupler" class="route-checkpoint route-step reveal-up" data-route-step="3" data-route-label="Süreklilik" data-route-title="Tek etkinlik kalıcı topluluk ritmine dönüşüyor" data-route-copy="Kulüp için iletişim sürer, üyeler için geri dönmek kolaylaşır; bir sonraki etkinliğin zemini hazır kalır.">
-              <span class="checkpoint-index">03</span>
-              <div>
-                <p class="eyebrow">Süreklilik</p>
-                <h3>Topluluk sadece etkinlik gününde yaşamaz.</h3>
-                <p>Etkinlik sonrası konuşmalar, fotoğraflar, takip ve bir sonraki buluşma çağrıları kopmadan devam eder; katılım döngüsü güçlenir.</p>
-              </div>
-            </article>
+          <article class="proof-card reveal-up">
+            <div class="proof-card-head">
+              <span>Organizatör değeri</span>
+              <strong>Aynı açıklamayı tekrar tekrar yapma yükü azalır.</strong>
+            </div>
+            <ul class="proof-list">
+              <li>Rota, pace ve buluşma detayı tek yerde kalır.</li>
+              <li>Katılım görünürlüğü daha öngörülebilir hale gelir.</li>
+              <li>Son dakika duyuruları dağılmaz.</li>
+            </ul>
+          </article>
 
-            <article id="cta" class="route-checkpoint route-step reveal-up route-checkpoint-cta" data-route-step="4" data-route-label="İletişim" data-route-title="Rota iletişim noktasında tamamlanıyor" data-route-copy="Hero’da başlayan çizgi burada kapanır: keşif, koordinasyon ve süreklilik artık topluluk yöneticileri için tek üründe toplanır.">
-              <span class="checkpoint-index">04</span>
-              <div>
-                <p class="eyebrow">İletişim</p>
-                <h3>Bu akışı topluluğunuza uyarlayalım.</h3>
-                <p>Koşu kulübünüz, yürüyüş topluluğunuz veya community programınız için Ruconn’un nasıl çalışacağını birlikte konuşalım.</p>
-                <div class="cta-actions checkpoint-actions">
-                  <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Bize%20Ulasin">Bize ulaşın</a>
-                  <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Topluluk%20Bilgisi">Topluluğunuzu anlatın</a>
-                </div>
-              </div>
-            </article>
-          </div>
+          <article class="proof-card reveal-up">
+            <div class="proof-card-head">
+              <span>Topluluk değeri</span>
+              <strong>İyi etkinlik tek seferlik kalmaz, ritme dönüşür.</strong>
+            </div>
+            <ul class="proof-list">
+              <li>Etkinlik sonrası bağ korunur.</li>
+              <li>Yeni gelenler topluluğa daha kolay karışır.</li>
+              <li>Bir sonraki buluşmaya dönüş eşiği düşer.</li>
+            </ul>
+          </article>
         </div>
       </section>
 
-      <section class="section why-section">
-        <div class="why-grid">
-          <article class="why-card why-card-large reveal-up feature-card">
-            <span>01 · Topluluk yöneticisi</span>
-            <h3>Programı görünür ve anlaşılır kıl.</h3>
-            <p>Şehirdeki doğru kitleye doğru etkinliği ulaştır, formatı net anlat, katılım kapısını sadeleştir.</p>
-          </article>
-          <article class="why-card reveal-up feature-card">
-            <span>02 · İletişim katmanı</span>
-            <h3>Dağınık mesaj yerine süreklilik üreten akış.</h3>
-            <p>Duyuru, hatırlatma, katılım sinyalleri ve etkinlik sonrası iletişim tek yerde akar.</p>
-          </article>
-          <article class="why-card reveal-up feature-card accent-card">
-            <span>03 · Kulüp ve topluluk</span>
-            <h3>Daha yüksek katılım, daha sakin operasyon.</h3>
-            <p>Organizasyon yükü azalır; üyeler geri döner, topluluk ritmi güçlenir.</p>
-          </article>
+      <section class="section editorial-band">
+        <div class="section-heading reveal-up section-heading-wide">
+          <p class="eyebrow">Ürün vaadi</p>
+          <h2>Ruconn, topluluk organizasyonunu güzel göstermek için değil; gerçekten daha iyi işletmek için var.</h2>
+          <p>Koşu kulüpleri ve yürüyüş toplulukları için en kritik problem sadece etkinlik açmak değil; doğru katılımcıyı çekmek, etkinlik gününü sakin yönetmek ve o enerjiyi sonraki buluşmaya taşımaktır.</p>
         </div>
 
-        <div class="why-rail">
-          <div class="why-rail-item reveal-up">
-            <strong>Öncesi</strong>
-            <p>Duyurular ve hazırlık netleşir.</p>
-          </div>
-          <div class="why-rail-item reveal-up">
-            <strong>Anı</strong>
-            <p>Katılım daha sıcak ve öngörülebilir olur.</p>
-          </div>
-          <div class="why-rail-item reveal-up">
-            <strong>Sonrası</strong>
-            <p>Topluluk bağı korunur, geri dönüş artar.</p>
-          </div>
+        <div class="editorial-cards">
+          <article class="editorial-card reveal-up">
+            <span>Yöneticiler için</span>
+            <h3>Daha görünür program, daha kontrollü akış.</h3>
+            <p>Her etkinlik ayrı ayrı açıklanmak zorunda kalmaz; önemli bilgiler netleşir, tekrar eden operasyon yükü azalır.</p>
+          </article>
+          <article class="editorial-card reveal-up accent-card">
+            <span>Üyeler için</span>
+            <h3>Karar vermesi kolay, katılması güven veren deneyim.</h3>
+            <p>Yeni gelenler neyle karşılaşacağını anlar; çekirdek üyeler ise takvimi daha düzenli takip eder.</p>
+          </article>
+          <article class="editorial-card reveal-up">
+            <span>Topluluk için</span>
+            <h3>Tek etkinlik değil, sürdürülebilir kulüp ritmi.</h3>
+            <p>İyi organize edilen her buluşma, bir sonraki buluşmanın zeminini hazırlar ve topluluğun büyümesini hızlandırır.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section experience-section">
+      <section id="journey" class="section route-journey" aria-label="Ruconn journey akışı">
+        <div class="section-heading reveal-up section-heading-wide">
+          <p class="eyebrow">Editorial journey</p>
+          <h2>Bir etkinliğin uçtan uca topluluk yolculuğu.</h2>
+          <p>Aşağı indikçe akış discovery’den retention’a ilerler. Her durak, kulüplerin ve event ekiplerinin gerçek iş yükünü azaltan net bir ürün faydasını temsil eder.</p>
+        </div>
+
+        <div class="journey-board">
+          <div class="journey-rail" aria-hidden="true">
+            <span></span>
+          </div>
+
+          <article id="discover" class="journey-stop journey-stop-left route-step reveal-up" data-route-step="1" data-route-label="Discovery" data-route-title="Etkinlik daha doğru kitleye görünür" data-route-copy="Rota tipi, pace, topluluk tonu ve buluşma formatı netleştiğinde doğru üye daha hızlı karar verir.">
+            <div class="journey-badge">01</div>
+            <div class="journey-card">
+              <p class="eyebrow">Discovery</p>
+              <h3>Koşuyu anlatmak için ekstra efor harcamayın.</h3>
+              <p>Ruconn; kulübün haftalık koşusunu, beginner walk’unu veya özel partner etkinliğini açık, güven veren ve karar verdirtici bir çerçevede sunar.</p>
+              <ul>
+                <li>Rota, pace ve seviye bilgisi net görünür.</li>
+                <li>Yeni katılımcı için giriş bariyeri düşer.</li>
+                <li>Kulüp tonu ve etkinlik formatı daha doğru aktarılır.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="coordinate" class="journey-stop journey-stop-right route-step reveal-up" data-route-step="2" data-route-label="Coordination" data-route-title="Hazırlık ve duyurular tek akışta kalır" data-route-copy="Kim geliyor, ne değişti, hangi bilgi kritik; tüm sinyaller etkinlik öncesi tek yerde toplanır.">
+            <div class="journey-badge">02</div>
+            <div class="journey-card">
+              <p class="eyebrow">Coordination</p>
+              <h3>Organizasyon günü, mesaj takibiyle yorulmaz.</h3>
+              <p>Etkinlik öncesi gelen sorular, hatırlatmalar, toplanma bilgileri ve son dakika değişiklikleri daha düzenli akar; ekip daha sakin çalışır.</p>
+              <ul>
+                <li>Katılım sinyalleri daha öngörülebilir olur.</li>
+                <li>Önemli güncellemeler kaybolmaz.</li>
+                <li>Organizatör ekibi tekrar eden açıklamaları azaltır.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="eventday" class="journey-stop journey-stop-left route-step reveal-up" data-route-step="3" data-route-label="Event day" data-route-title="Buluşma anı daha akıcı yaşanır" data-route-copy="Üye neyle karşılaşacağını bilir; ekip ise etkinlik gününde daha az sürtünmeyle ilerler.">
+            <div class="journey-badge">03</div>
+            <div class="journey-card">
+              <p class="eyebrow">Event day</p>
+              <h3>Toplanma anı daha net, deneyim daha akıcı.</h3>
+              <p>Running crew, morning walk grubu ya da markalı community event fark etmeksizin; etkinlik günü belirsizlik azalır, karşılama hissi güçlenir.</p>
+              <ul>
+                <li>Nerede buluşulacağı ve format daha anlaşılırdır.</li>
+                <li>Katılımcı deneyimi daha güvenli ve düzenli hissedilir.</li>
+                <li>İlk kez gelen üyeler topluluğa daha kolay karışır.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="community" class="journey-stop journey-stop-right route-step reveal-up" data-route-step="4" data-route-label="Retention" data-route-title="Etkinlik sonrası enerji kaybolmaz" data-route-copy="İletişim devam ettiği için topluluk hafızası güçlenir; geri dönüş ve tekrar katılım kolaylaşır.">
+            <div class="journey-badge">04</div>
+            <div class="journey-card journey-card-accent">
+              <p class="eyebrow">Retention</p>
+              <h3>İyi etkinlik, tek seferlik kalmaz.</h3>
+              <p>Etkinlik bittiğinde bağ kopmaz. Kulüp iletişimi sürer, içerik ve geri dönüşler birikir, bir sonraki buluşmaya dönmek daha doğal hale gelir.</p>
+              <ul>
+                <li>Tekrar katılım için sıcak zemin oluşur.</li>
+                <li>Topluluk hafızası sadece chat içinde kaybolmaz.</li>
+                <li>Kulüpler daha düzenli bir ritim kurabilir.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stack-section">
         <div class="section-heading reveal-up narrow">
-          <p class="eyebrow">Operasyon akışı</p>
-          <h2>Üç net adım. Topluluk yöneticisi için tek üst seviye akış.</h2>
+          <p class="eyebrow">Nerede değer üretir?</p>
+          <h2>Kulüpler, yürüyüş toplulukları ve event ekipleri için doğrudan operasyonel fayda.</h2>
         </div>
 
-        <div class="experience-stack">
-          <article class="experience-card experience-card-a reveal-up">
-            <div class="experience-index">01</div>
-            <h3>Yayınla</h3>
-            <p>Etkinliğini doğru bağlamla görünür kıl.</p>
-            <ul>
-              <li>Rota, tempo ve format görünürlüğü</li>
-              <li>Kulüp tonu ve topluluk sinyalleri</li>
-              <li>Yeni üyeler için anlaşılır giriş</li>
-            </ul>
+        <div class="stack-grid">
+          <article class="stack-card reveal-up">
+            <span>Koşu kulüpleri</span>
+            <h3>Haftalık akışı daha görünür ve daha tutarlı yönetir.</h3>
+            <p>Farklı pace grupları, farklı formatlar ve düzenli yayın akışı tek sistem mantığında toplanır.</p>
           </article>
-
-          <article class="experience-card experience-card-b reveal-up">
-            <div class="experience-index">02</div>
-            <h3>Koordine et</h3>
-            <p>Etkinlik öncesi iletişimi ve katılımı tek yerde toparla.</p>
-            <ul>
-              <li>Kim geliyor, önceden gör</li>
-              <li>Hatırlatmaları ve güncellemeleri düzenle</li>
-              <li>Organizasyon stresini azalt</li>
-            </ul>
+          <article class="stack-card reveal-up">
+            <span>Yürüyüş toplulukları</span>
+            <h3>Yeni katılımcı için daha davetkar bir giriş kurar.</h3>
+            <p>Seviye, tempo ve topluluk atmosferi daha anlaşılır olduğunda katılma eşiği düşer.</p>
           </article>
-
-          <article class="experience-card experience-card-c reveal-up">
-            <div class="experience-index">03</div>
-            <h3>Sürdür</h3>
-            <p>Etkinlik sonrasını da topluluğun bir parçası yap.</p>
-            <ul>
-              <li>Etkinlik sonrası iletişimi canlı tut</li>
-              <li>Bir sonraki buluşmaya dönüşü artır</li>
-              <li>Düzenli ritim ve aidiyet kur</li>
-            </ul>
+          <article class="stack-card reveal-up">
+            <span>Etkinlik organizasyonu</span>
+            <h3>Partnerli ve özel etkinlikleri daha sakin koordine eder.</h3>
+            <p>Kampanya görünürlüğü, bilgilendirme ve saha günü iletişimi daha kontrollü ilerler.</p>
           </article>
         </div>
       </section>
@@ -264,23 +314,35 @@ app.innerHTML = `
       <section class="section metrics-section">
         <div class="metrics-panel reveal-up">
           <div class="metrics-copy">
-            <p class="eyebrow">Ne satıyoruz?</p>
-            <h2>Daha güçlü katılım. Daha canlı topluluk. Daha kolay organizasyon.</h2>
-            <p>Ruconn, topluluk yöneticisinin keşif, iletişim ve devamlılık yükünü tek akışta toparlar.</p>
+            <p class="eyebrow">Ruconn neyi iyileştirir?</p>
+            <h2>Daha yüksek katılım kalitesi. Daha düşük operasyon sürtünmesi. Daha güçlü topluluk devamlılığı.</h2>
+            <p>Ürün dili basit: discovery’yi güçlendir, koordinasyonu toparla, event sonrası enerjiyi boşa bırakma.</p>
           </div>
           <div class="metrics-list">
             <div>
               <strong>01</strong>
-              <span>Keşif → koordinasyon → geri dönüş</span>
+              <span>Etkinliklerin anlaşılmasını hızlandırır</span>
             </div>
             <div>
               <strong>02</strong>
-              <span>Duyuru → katılım → etkinlik sonrası iletişim</span>
+              <span>Yöneticilerin tekrarlı mesaj yükünü azaltır</span>
             </div>
             <div>
               <strong>03</strong>
-              <span>Tek mesaj: topluluğu canlı tutarken organizasyonu sadeleştir</span>
+              <span>Topluluğu yalnızca etkinlik günü aktif olmaktan çıkarır</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="section final-cta route-step reveal-up" data-route-step="4" data-route-label="Contact" data-route-title="Ruconn kulübünüze göre kurgulanabilir" data-route-copy="Koşu kulübü, walking community ya da marka destekli event serisi için doğru akışı birlikte tasarlayabiliriz.">
+        <div class="final-cta-panel">
+          <p class="eyebrow">İletişim</p>
+          <h2>Ruconn’u topluluğunuza göre birlikte şekillendirelim.</h2>
+          <p>Bir koşu kulübü, yürüyüş topluluğu veya etkinlik serisi yönetiyorsanız; mevcut akışınızı sadeleştirip tekrar katılımı güçlendirecek modeli birlikte konuşalım.</p>
+          <div class="cta-actions">
+            <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo isteyin</a>
+            <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Topluluk%20Bilgisi">Topluluğunuzu anlatın</a>
           </div>
         </div>
       </section>
@@ -306,74 +368,81 @@ const setupRouteScene = () => {
   renderer.setClearColor(0x000000, 0)
 
   const scene = new THREE.Scene()
-  const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100)
-  camera.position.set(0, 1.2, 9.5)
+  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100)
+  camera.position.set(0, 0.5, 10.6)
 
   const sizes = { width: 0, height: 0 }
   const state = {
     progress: 0,
-    visualProgress: 0,
-    checkpoint: 0
+    visualProgress: 0
   }
 
   const routePoints = [
-    new THREE.Vector3(-5.1, -1.6, -2.4),
-    new THREE.Vector3(-3.8, -0.7, -1.7),
-    new THREE.Vector3(-2.6, 0.8, -0.8),
-    new THREE.Vector3(-1.1, 1.55, 0.2),
-    new THREE.Vector3(0.7, 0.35, 1.25),
-    new THREE.Vector3(2.0, -1.25, 0.65),
-    new THREE.Vector3(3.55, -0.35, -0.55),
-    new THREE.Vector3(5.15, 1.15, -1.75)
+    new THREE.Vector3(-5.4, 2.6, -2.4),
+    new THREE.Vector3(-3.1, 1.2, -1.3),
+    new THREE.Vector3(-1.8, -0.4, -0.4),
+    new THREE.Vector3(0.8, -1.9, 0.8),
+    new THREE.Vector3(3.1, -0.2, 1.4),
+    new THREE.Vector3(4.2, 1.7, 0.8),
+    new THREE.Vector3(2.2, 3.1, -0.3),
+    new THREE.Vector3(-0.6, 1.3, -1.2),
+    new THREE.Vector3(-2.8, -1.5, -0.2),
+    new THREE.Vector3(-0.4, -3.4, 0.9),
+    new THREE.Vector3(2.8, -2.4, 1.6),
+    new THREE.Vector3(5.1, 0.4, 0.2)
   ]
 
-  const curve = new THREE.CatmullRomCurve3(routePoints, false, 'catmullrom', 0.45)
-  const curvePoints = curve.getPoints(320)
+  const curve = new THREE.CatmullRomCurve3(routePoints, false, 'catmullrom', 0.42)
+  const curvePoints = curve.getPoints(420)
 
   const routeGeometry = new THREE.BufferGeometry().setFromPoints(curvePoints)
   routeGeometry.setDrawRange(0, 2)
 
-  const routeLine = new THREE.Line(
-    routeGeometry,
-    new THREE.LineBasicMaterial({ color: 0x7fff3a, transparent: true, opacity: 0.92 })
-  )
-  scene.add(routeLine)
-
+  const ghostGeometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(260))
   const ghostLine = new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints(curve.getPoints(180)),
-    new THREE.LineBasicMaterial({ color: 0x8cabd1, transparent: true, opacity: 0.14 })
+    ghostGeometry,
+    new THREE.LineBasicMaterial({ color: 0x95a9c8, transparent: true, opacity: 0.12 })
   )
   scene.add(ghostLine)
+
+  const routeLine = new THREE.Line(
+    routeGeometry,
+    new THREE.LineBasicMaterial({ color: 0x8cff58, transparent: true, opacity: 0.95 })
+  )
+  scene.add(routeLine)
 
   const checkpointGroup = new THREE.Group()
   scene.add(checkpointGroup)
 
-  const checkpoints = routePoints.map((point, index) => {
+  const stopIndexes = [0, 3, 6, 9, 11]
+  const checkpoints = stopIndexes.map((pointIndex, index) => {
+    const point = routePoints[pointIndex]
+
     const ring = new THREE.Mesh(
-      new THREE.RingGeometry(0.13, 0.19, 42),
-      new THREE.MeshBasicMaterial({ color: index === 4 ? 0xffffff : 0x7fff3a, transparent: true, opacity: 0.38, side: THREE.DoubleSide })
+      new THREE.RingGeometry(0.18, 0.26, 48),
+      new THREE.MeshBasicMaterial({ color: index === 4 ? 0xffffff : 0x8cff58, transparent: true, opacity: 0.34, side: THREE.DoubleSide })
     )
     ring.position.copy(point)
     ring.lookAt(camera.position)
 
     const core = new THREE.Mesh(
-      new THREE.SphereGeometry(index === 4 ? 0.12 : 0.09, 20, 20),
-      new THREE.MeshBasicMaterial({ color: index === 4 ? 0xffffff : 0x7fff3a, transparent: true, opacity: index === 0 ? 1 : 0.4 })
+      new THREE.SphereGeometry(index === 4 ? 0.14 : 0.11, 24, 24),
+      new THREE.MeshBasicMaterial({ color: index === 4 ? 0xffffff : 0x8cff58, transparent: true, opacity: index === 0 ? 1 : 0.38 })
     )
     core.position.copy(point)
 
     checkpointGroup.add(ring, core)
-    return { ring, core }
+    return { ring, core, progress: pointIndex / (routePoints.length - 1) }
   })
 
   const runner = new THREE.Mesh(
-    new THREE.SphereGeometry(0.16, 26, 26),
+    new THREE.SphereGeometry(0.18, 28, 28),
     new THREE.MeshPhysicalMaterial({
       color: 0xffffff,
-      emissive: 0x7fff3a,
-      emissiveIntensity: 1.6,
-      roughness: 0.16,
-      metalness: 0.04,
+      emissive: 0x8cff58,
+      emissiveIntensity: 1.8,
+      roughness: 0.14,
+      metalness: 0.08,
       transparent: true,
       opacity: 0.96
     })
@@ -381,17 +450,32 @@ const setupRouteScene = () => {
   scene.add(runner)
 
   const halo = new THREE.Mesh(
-    new THREE.TorusGeometry(0.44, 0.018, 18, 120),
-    new THREE.MeshBasicMaterial({ color: 0x7fff3a, transparent: true, opacity: 0.24 })
+    new THREE.TorusGeometry(0.52, 0.018, 18, 120),
+    new THREE.MeshBasicMaterial({ color: 0x8cff58, transparent: true, opacity: 0.22 })
   )
   halo.rotation.x = Math.PI / 2
   scene.add(halo)
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1.18)
-  const keyLight = new THREE.PointLight(0x7fff3a, 18, 40, 2)
-  keyLight.position.set(1.8, 3.2, 4.4)
-  const fillLight = new THREE.PointLight(0x1e3a5f, 14, 36, 2)
-  fillLight.position.set(-4.5, -1.8, 2.8)
+  const starGeometry = new THREE.BufferGeometry()
+  const starCount = 240
+  const starPositions = new Float32Array(starCount * 3)
+  for (let i = 0; i < starCount; i += 1) {
+    starPositions[i * 3] = (Math.random() - 0.5) * 14
+    starPositions[i * 3 + 1] = (Math.random() - 0.5) * 10
+    starPositions[i * 3 + 2] = (Math.random() - 0.5) * 8
+  }
+  starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
+  const stars = new THREE.Points(
+    starGeometry,
+    new THREE.PointsMaterial({ color: 0xffffff, size: 0.026, transparent: true, opacity: 0.45 })
+  )
+  scene.add(stars)
+
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.25)
+  const keyLight = new THREE.PointLight(0x8cff58, 22, 42, 2)
+  keyLight.position.set(2.8, 3.4, 4.2)
+  const fillLight = new THREE.PointLight(0x335d96, 18, 36, 2)
+  fillLight.position.set(-4.2, -2.4, 3.4)
   scene.add(ambientLight, keyLight, fillLight)
 
   const resize = () => {
@@ -423,10 +507,10 @@ const setupRouteScene = () => {
   window.addEventListener('resize', resize)
 
   const render = () => {
-    state.visualProgress += (state.progress - state.visualProgress) * (reducedMotion ? 1 : 0.08)
+    state.visualProgress += (state.progress - state.visualProgress) * (reducedMotion ? 1 : 0.065)
 
     const currentPoint = curve.getPointAt(state.visualProgress)
-    const nextPoint = curve.getPointAt(Math.min(0.999, state.visualProgress + 0.01))
+    const nextPoint = curve.getPointAt(Math.min(0.999, state.visualProgress + 0.008))
 
     runner.position.copy(currentPoint)
     runner.lookAt(nextPoint)
@@ -435,25 +519,24 @@ const setupRouteScene = () => {
     const count = Math.max(2, Math.floor(state.visualProgress * curvePoints.length))
     routeGeometry.setDrawRange(0, count)
 
-    checkpoints.forEach(({ ring, core }, index) => {
-      const checkpointProgress = index / (checkpoints.length - 1)
-      const active = state.visualProgress >= checkpointProgress - 0.02
-      core.material.opacity = active ? 1 : 0.32
-      ring.material.opacity = active ? 0.84 : 0.2
-      ring.scale.setScalar(active ? 1.12 : 1)
+    checkpoints.forEach(({ ring, core, progress }) => {
+      const active = state.visualProgress >= progress - 0.03
+      core.material.opacity = active ? 1 : 0.26
+      ring.material.opacity = active ? 0.86 : 0.18
+      ring.scale.setScalar(active ? 1.14 : 1)
       ring.lookAt(camera.position)
     })
 
-    routeLine.rotation.z = THREE.MathUtils.lerp(routeLine.rotation.z, (state.visualProgress - 0.5) * 0.18, 0.06)
-    ghostLine.rotation.z = THREE.MathUtils.lerp(ghostLine.rotation.z, (0.5 - state.visualProgress) * 0.12, 0.06)
-    checkpointGroup.rotation.z = THREE.MathUtils.lerp(checkpointGroup.rotation.z, (state.visualProgress - 0.5) * 0.1, 0.05)
-    keyLight.intensity = 15 + state.visualProgress * 6
-    halo.rotation.z += reducedMotion ? 0 : 0.006
+    routeLine.rotation.z = THREE.MathUtils.lerp(routeLine.rotation.z, (state.visualProgress - 0.5) * 0.16, 0.03)
+    ghostLine.rotation.z = THREE.MathUtils.lerp(ghostLine.rotation.z, (0.5 - state.visualProgress) * 0.08, 0.03)
+    checkpointGroup.rotation.z = THREE.MathUtils.lerp(checkpointGroup.rotation.z, (state.visualProgress - 0.5) * 0.1, 0.03)
+    stars.rotation.z += reducedMotion ? 0 : 0.0009
+    halo.rotation.z += reducedMotion ? 0 : 0.005
 
-    camera.position.x = THREE.MathUtils.lerp(camera.position.x, (state.visualProgress - 0.5) * 1.2, 0.04)
-    camera.position.y = THREE.MathUtils.lerp(camera.position.y, 1 + state.visualProgress * 0.5, 0.04)
-    camera.position.z = THREE.MathUtils.lerp(camera.position.z, 9.5 - state.visualProgress * 1.4, 0.04)
-    camera.lookAt(0.1, 0.1, 0)
+    camera.position.x = THREE.MathUtils.lerp(camera.position.x, (state.visualProgress - 0.5) * 1.8, 0.03)
+    camera.position.y = THREE.MathUtils.lerp(camera.position.y, 0.5 - state.visualProgress * 0.25, 0.03)
+    camera.position.z = THREE.MathUtils.lerp(camera.position.z, 10.8 - state.visualProgress * 1.5, 0.03)
+    camera.lookAt(0.2, -0.2, 0)
 
     renderer.render(scene, camera)
   }
@@ -462,9 +545,9 @@ const setupRouteScene = () => {
 
   setProgress(0)
   setOverlay({
-    label: 'Başlangıç',
-    title: 'Topluluk ritmi kuruluyor',
-    copy: 'Kulüp yöneticisi ilk ekranda keşif, iletişim ve organizasyonu tek akışta görür; rota daha başlamadan netleşir.',
+    label: 'Ruconn',
+    title: 'Topluluk operasyonu tek yüzeyde',
+    copy: 'Etkinliği yayınlamak, katılımı görmek, duyuruları yönetmek ve üyeyi geri getirmek aynı ürün akışında birleşir.',
     index: 0
   })
 
@@ -482,51 +565,51 @@ if (!reducedMotion) {
   })
 
   gsap.from('.hero-copy > *', {
-    y: 28,
+    y: 30,
     opacity: 0,
-    duration: 0.85,
+    duration: 0.88,
     stagger: 0.08,
     delay: 0.1,
     ease: 'power3.out'
   })
 
   gsap.from('.hero-scene-shell', {
-    y: 34,
+    y: 36,
     opacity: 0,
-    scale: 0.965,
+    scale: 0.97,
     duration: 1.15,
     ease: 'power3.out'
   })
 
   gsap.to('.hero-glow-primary', {
-    x: 26,
-    y: -30,
-    duration: 5.2,
+    x: 30,
+    y: -28,
+    duration: 5.6,
     repeat: -1,
     yoyo: true,
     ease: 'sine.inOut'
   })
 
   gsap.to('.hero-glow-secondary', {
-    x: -18,
-    y: 18,
-    duration: 6.2,
+    x: -20,
+    y: 22,
+    duration: 6.4,
     repeat: -1,
     yoyo: true,
     ease: 'sine.inOut'
   })
 
   gsap.to('.hero-float-a', {
-    y: -12,
-    duration: 2.4,
+    y: -10,
+    duration: 2.5,
     repeat: -1,
     yoyo: true,
     ease: 'sine.inOut'
   })
 
   gsap.to('.hero-float-b', {
-    y: 10,
-    duration: 2.8,
+    y: 12,
+    duration: 2.9,
     repeat: -1,
     yoyo: true,
     ease: 'sine.inOut'
@@ -550,19 +633,19 @@ if (!reducedMotion) {
     )
   })
 
-  gsap.utils.toArray('.experience-card').forEach((card, index) => {
-    gsap.fromTo(card,
-      { y: 30, autoAlpha: 0 },
+  gsap.utils.toArray('.journey-stop').forEach((stop, index) => {
+    gsap.fromTo(stop,
+      { y: 46, autoAlpha: 0 },
       {
         y: 0,
         autoAlpha: 1,
-        duration: 0.78,
-        delay: index * 0.04,
+        duration: 0.92,
+        delay: index * 0.05,
         ease: 'power3.out',
         clearProps: 'transform,opacity,visibility',
         scrollTrigger: {
-          trigger: card,
-          start: 'top 88%',
+          trigger: stop,
+          start: 'top 86%',
           once: true
         }
       }
@@ -573,10 +656,8 @@ if (!reducedMotion) {
     trigger: document.body,
     start: 'top top',
     end: 'bottom bottom',
-    scrub: 0.6,
-    onUpdate: (self) => {
-      routeScene?.setProgress(self.progress)
-    }
+    scrub: 0.55,
+    onUpdate: (self) => routeScene?.setProgress(self.progress)
   })
 
   gsap.utils.toArray('.route-step').forEach((step) => {
@@ -603,23 +684,25 @@ if (!reducedMotion) {
     })
   })
 
-  ScrollTrigger.create({
-    trigger: '.experience-section',
-    start: 'top 72%',
-    end: 'bottom 68%',
-    onUpdate: (self) => {
-      gsap.to('.experience-card-a', { y: self.progress * -6, duration: 0.3, overwrite: 'auto' })
-      gsap.to('.experience-card-b', { y: self.progress * -12, duration: 0.3, overwrite: 'auto' })
-      gsap.to('.experience-card-c', { y: self.progress * -18, duration: 0.3, overwrite: 'auto' })
-    }
+  gsap.utils.toArray('.journey-card').forEach((card, index) => {
+    gsap.to(card, {
+      y: index % 2 === 0 ? -12 : -18,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.8
+      }
+    })
   })
 } else {
-  document.querySelectorAll('.reveal-up, .experience-card').forEach((item) => {
+  document.querySelectorAll('.reveal-up, .journey-stop').forEach((item) => {
     item.style.opacity = '1'
     item.style.visibility = 'visible'
     item.style.transform = 'none'
   })
-  routeScene?.setProgress(0.22)
+  routeScene?.setProgress(0.24)
 }
 
 window.addEventListener('load', () => ScrollTrigger.refresh())
