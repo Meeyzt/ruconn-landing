@@ -84,16 +84,17 @@ body::after {
 .momentum-strip,
 .why-grid,
 .why-rail,
-.clubs-grid,
 .metrics-list,
-.cta-actions {
+.cta-actions,
+.route-overlay-progress,
+.route-overlay-checkpoints {
   display: flex;
 }
 
 .topbar {
   position: sticky;
   top: 16px;
-  z-index: 30;
+  z-index: 40;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
@@ -125,9 +126,11 @@ body::after {
 .eyebrow,
 .signal-kicker,
 .experience-index,
-.clubs-card small,
 .hero-hud,
-.hero-float-card small {
+.hero-float-card small,
+.route-overlay-copy small,
+.checkpoint-index,
+.journey-kicker {
   letter-spacing: 0.04em;
 }
 
@@ -159,9 +162,11 @@ body::after {
 .eyebrow,
 .signal-kicker,
 .experience-index,
-.clubs-card small,
 .hero-hud,
-.hero-float-card small {
+.hero-float-card small,
+.route-overlay-copy small,
+.checkpoint-index,
+.journey-kicker {
   text-transform: uppercase;
   font-size: 0.78rem;
   color: var(--primary);
@@ -207,10 +212,11 @@ h3 {
 .why-rail-item p,
 .experience-card p,
 .experience-card li,
-.clubs-card p,
 .metrics-copy p,
 .metrics-list span,
-.cta p {
+.route-checkpoint p,
+.route-overlay-copy p,
+.journey-intro p {
   color: var(--text-muted);
 }
 
@@ -226,16 +232,17 @@ h3 {
 .momentum-strip,
 .why-grid,
 .why-rail,
-.clubs-grid,
 .metrics-list,
-.cta-actions {
+.cta-actions,
+.route-overlay-checkpoints {
   gap: 16px;
 }
 
 .hero-actions,
 .hero-proof,
 .why-rail,
-.cta-actions {
+.cta-actions,
+.route-overlay-checkpoints {
   flex-wrap: wrap;
 }
 
@@ -281,9 +288,12 @@ h3 {
 .why-card,
 .why-rail-item,
 .experience-card,
-.clubs-card,
 .metrics-panel,
-.cta {
+.route-checkpoint,
+.journey-intro,
+.route-overlay,
+.hero-hud,
+.hero-float-card {
   border: 1px solid rgba(127, 255, 58, 0.1);
   background: linear-gradient(180deg, rgba(30, 58, 95, 0.78), rgba(21, 38, 66, 0.82));
   backdrop-filter: blur(18px) saturate(125%);
@@ -304,10 +314,11 @@ h3 {
 .hero-proof strong,
 .momentum-strip strong,
 .hero-float-card strong,
-.clubs-card h3,
 .metrics-list strong,
 .hero-hud strong,
-.why-rail-item strong {
+.why-rail-item strong,
+.route-overlay-copy strong,
+.route-progress-meta strong {
   display: block;
   margin-bottom: 8px;
   color: #fff;
@@ -323,7 +334,8 @@ h3 {
 .hero-hud small,
 .hero-float-card small,
 .hero-hud div,
-.cta p {
+.route-progress-meta span,
+.route-overlay-checkpoints span {
   color: var(--text-muted);
 }
 
@@ -386,12 +398,11 @@ h3 {
 }
 
 .hero-hud,
-.hero-float-card {
+.hero-float-card,
+.route-overlay {
   position: absolute;
   z-index: 3;
-  border: 1px solid rgba(127,255,58,0.12);
   background: rgba(10, 26, 47, 0.72);
-  backdrop-filter: blur(18px) saturate(130%);
 }
 
 .hero-hud {
@@ -421,6 +432,77 @@ h3 {
   margin-bottom: 8px;
 }
 
+.route-overlay {
+  left: 20px;
+  right: 20px;
+  bottom: 116px;
+  padding: 18px;
+  border-radius: 24px;
+}
+
+.route-overlay-copy p {
+  margin: 0;
+  max-width: 38ch;
+  line-height: 1.6;
+}
+
+.route-overlay-copy strong {
+  font-size: 1.3rem;
+}
+
+.route-overlay-progress {
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.route-progress-meta {
+  min-width: 118px;
+}
+
+.route-progress-track {
+  position: relative;
+  flex: 1;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(244, 248, 255, 0.08);
+  overflow: hidden;
+}
+
+.route-progress-track span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform-origin: left center;
+  transform: scaleX(0.02);
+  background: linear-gradient(90deg, rgba(127,255,58,0.8), #ffffff);
+}
+
+.route-overlay-checkpoints {
+  margin-top: 16px;
+}
+
+.route-overlay-checkpoints span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(127,255,58,0.12);
+  background: rgba(255,255,255,0.03);
+  font-size: 0.76rem;
+}
+
+.route-overlay-checkpoints span.is-active {
+  color: #081426;
+  background: var(--primary);
+  border-color: transparent;
+}
+
+.route-overlay-checkpoints span.is-passed {
+  color: #fff;
+  border-color: rgba(255,255,255,0.16);
+}
+
 .hero-float-card {
   width: 220px;
   padding: 16px 16px 18px;
@@ -434,7 +516,7 @@ h3 {
 
 .hero-float-b {
   left: 22px;
-  bottom: 124px;
+  bottom: 312px;
 }
 
 .momentum-strip {
@@ -444,7 +526,7 @@ h3 {
 .momentum-strip article,
 .why-card,
 .why-rail-item,
-.clubs-card {
+.route-checkpoint {
   flex: 1;
   padding: 28px;
   border-radius: var(--radius-lg);
@@ -465,12 +547,77 @@ h3 {
 }
 
 .section-heading-wide {
-  max-width: 840px;
+  max-width: 860px;
 }
 
 .section-heading > p:last-child {
   max-width: 56ch;
   line-height: 1.72;
+}
+
+.route-journey {
+  position: relative;
+}
+
+.journey-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.3fr) minmax(0, 0.7fr);
+  gap: 24px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+.journey-intro {
+  position: sticky;
+  top: 118px;
+  padding: 28px;
+  border-radius: 28px;
+}
+
+.journey-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.journey-intro p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.journey-checkpoints {
+  display: grid;
+  gap: 18px;
+}
+
+.route-checkpoint {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-height: 220px;
+}
+
+.route-checkpoint h3 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.checkpoint-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  border: 1px solid rgba(127,255,58,0.14);
+  background: rgba(255,255,255,0.03);
+}
+
+.route-checkpoint-cta {
+  background: linear-gradient(180deg, rgba(127,255,58,0.14), rgba(21,38,66,0.86));
+}
+
+.checkpoint-actions {
+  margin-top: 24px;
 }
 
 .why-grid,
@@ -530,43 +677,18 @@ h3 {
   line-height: 1.75;
 }
 
-.clubs-layout,
 .metrics-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: 26px;
   align-items: start;
+  padding: 34px;
+  border-radius: 34px;
 }
 
-.clubs-copy p:last-child,
 .metrics-copy p {
   max-width: 52ch;
   line-height: 1.72;
-}
-
-.clubs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.quote-card {
-  background: linear-gradient(180deg, rgba(127,255,58,0.16), rgba(30,58,95,0.82));
-}
-
-.quote-card p {
-  color: #fff;
-  font-size: 1.18rem;
-  line-height: 1.5;
-}
-
-.quote-card span {
-  color: rgba(244, 248, 255, 0.72);
-}
-
-.metrics-panel {
-  padding: 34px;
-  border-radius: 34px;
 }
 
 .metrics-list {
@@ -587,26 +709,13 @@ h3 {
   color: var(--primary);
 }
 
-.cta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
-  padding: 36px;
-  border-radius: 34px;
-}
-
-.cta > div {
-  max-width: 680px;
-}
-
 .narrow {
   max-width: 680px;
 }
 
 @media (max-width: 1120px) {
   .hero,
-  .clubs-layout,
+  .journey-layout,
   .metrics-panel,
   .experience-stack {
     grid-template-columns: 1fr;
@@ -615,8 +724,7 @@ h3 {
   .momentum-strip,
   .why-grid,
   .why-rail,
-  .hero-proof,
-  .cta {
+  .hero-proof {
     flex-direction: column;
   }
 
@@ -632,22 +740,23 @@ h3 {
   .hero-visual {
     min-height: 600px;
   }
+
+  .journey-intro {
+    position: static;
+  }
 }
 
 @media (max-width: 860px) {
   .topbar,
   .topnav,
   .hero-actions,
-  .cta-actions {
+  .checkpoint-actions,
+  .route-overlay-progress {
     flex-wrap: wrap;
   }
 
-  .clubs-grid {
-    grid-template-columns: 1fr;
-  }
-
   .hero-scene-shell {
-    height: 620px;
+    height: 640px;
   }
 
   .hero-hud,
@@ -657,6 +766,10 @@ h3 {
 
   .hud-bottom div {
     max-width: none;
+  }
+
+  .route-checkpoint {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -692,14 +805,32 @@ h3 {
   .why-card,
   .why-rail-item,
   .experience-card,
-  .clubs-card,
   .metrics-panel,
-  .cta {
+  .route-checkpoint,
+  .journey-intro,
+  .route-overlay,
+  .hero-hud,
+  .hero-float-card {
     border-radius: 24px;
   }
 
   .hero-scene-shell {
-    height: 560px;
+    height: 580px;
+  }
+
+  .route-overlay {
+    left: 14px;
+    right: 14px;
+    bottom: 92px;
+    padding: 15px;
+  }
+
+  .route-overlay-copy strong {
+    font-size: 1.06rem;
+  }
+
+  .route-overlay-checkpoints span {
+    font-size: 0.72rem;
   }
 
   .hero-float-card {
@@ -709,11 +840,39 @@ h3 {
   }
 
   .hero-float-a {
-    top: 88px;
+    top: 82px;
   }
 
   .hero-float-b {
-    bottom: 108px;
+    bottom: 284px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-scene-shell {
+    height: 520px;
+  }
+
+  .hero-float-card {
+    display: none;
+  }
+
+  .route-overlay {
+    bottom: 86px;
+  }
+
+  .hud-bottom {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    padding: 14px;
+  }
+
+  .hud-top {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    padding: 14px;
   }
 }
 

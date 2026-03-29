@@ -17,7 +17,7 @@ app.innerHTML = `
 
       <nav class="topnav" aria-label="Ana navigasyon">
         <a href="#neden">Ürün</a>
-        <a href="#deneyim">Akış</a>
+        <a href="#journey">Akış</a>
         <a href="#kulupler">Kulüpler</a>
         <a href="#cta">Demo</a>
       </nav>
@@ -26,7 +26,7 @@ app.innerHTML = `
     </header>
 
     <main>
-      <section id="hero" class="hero section">
+      <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Start" data-route-title="Şehir açılıyor" data-route-copy="Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.">
         <div class="hero-copy reveal-up">
           <p class="eyebrow">Running community OS</p>
           <h1>Koşuyu bul. Katıl. Bağlı kal.</h1>
@@ -36,7 +36,7 @@ app.innerHTML = `
 
           <div class="hero-actions">
             <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo planla</a>
-            <a class="button button-secondary" href="#neden">Nasıl çalışır?</a>
+            <a class="button button-secondary" href="#journey">Rotayı gör</a>
           </div>
 
           <div class="hero-proof">
@@ -58,11 +58,32 @@ app.innerHTML = `
         <div class="hero-visual reveal-scale" aria-hidden="true">
           <div class="hero-glow hero-glow-primary"></div>
           <div class="hero-glow hero-glow-secondary"></div>
-          <div class="hero-scene-shell">
+          <div class="hero-scene-shell route-stage-shell">
             <canvas id="route-canvas"></canvas>
-            <div class="hero-hud hud-top">
+            <div class="hero-hud hud-top route-summary-bar">
               <span>LIVE ROUTE</span>
               <span>İstanbul / cadence mode</span>
+            </div>
+            <div class="route-overlay" aria-hidden="true">
+              <div class="route-overlay-copy">
+                <small id="route-overlay-label">Start</small>
+                <strong id="route-overlay-title">Şehir açılıyor</strong>
+                <p id="route-overlay-copy">Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.</p>
+              </div>
+              <div class="route-overlay-progress">
+                <div class="route-progress-meta">
+                  <span>Route progress</span>
+                  <strong id="route-progress-value">00%</strong>
+                </div>
+                <div class="route-progress-track"><span id="route-progress-bar"></span></div>
+              </div>
+              <div class="route-overlay-checkpoints" id="route-overlay-checkpoints">
+                <span class="is-active">Start</span>
+                <span>Discover</span>
+                <span>Join</span>
+                <span>Belong</span>
+                <span>CTA</span>
+              </div>
             </div>
             <div class="hero-hud hud-bottom">
               <div>
@@ -104,13 +125,64 @@ app.innerHTML = `
         </article>
       </section>
 
-      <section id="neden" class="section why-section">
+      <section id="journey" class="section route-journey" aria-label="Ruconn rota akışı">
         <div class="section-heading section-heading-wide reveal-up">
-          <p class="eyebrow">Neden Ruconn</p>
-          <h2>Etkinlik ekranından daha fazlası.</h2>
-          <p>Ruconn, koşunun etrafındaki sosyal akışı daha net, daha düzenli ve daha premium bir deneyime çevirir.</p>
+          <p class="eyebrow">Scroll progress route</p>
+          <h2>Hero’dan CTA’ya tek bir koşu rotası.</h2>
+          <p>Kullanıcı aşağı indikçe rota ilerler; her section yeni bir checkpoint gibi davranır. Görsel sahne hareket eder ama arayüz temiz ve premium kalır.</p>
         </div>
 
+        <div class="journey-layout">
+          <div class="journey-intro reveal-up">
+            <span class="journey-kicker">Checkpoint logic</span>
+            <p>Her blok yeni bir eşik. Live route sahnesi aynı kalır, ilerleme hissi scroll ile derinleşir.</p>
+          </div>
+
+          <div class="journey-checkpoints">
+            <article id="neden" class="route-checkpoint route-step reveal-up" data-route-step="1" data-route-label="Discover" data-route-title="Doğru koşu öne çıkıyor" data-route-copy="Rota, tempo ve topluluk tonu tek bakışta anlaşılır; keşif sürtünmesizleşir.">
+              <span class="checkpoint-index">01</span>
+              <div>
+                <p class="eyebrow">Discover</p>
+                <h3>Etkinlik ekranından daha fazlası.</h3>
+                <p>Ruconn, koşunun etrafındaki sosyal akışı daha net, daha düzenli ve daha premium bir deneyime çevirir.</p>
+              </div>
+            </article>
+
+            <article id="deneyim" class="route-checkpoint route-step reveal-up" data-route-step="2" data-route-label="Join" data-route-title="Hazırlık sosyal olarak netleşiyor" data-route-copy="Kim geliyor, his nasıl, giriş ne kadar kolay; tüm katılım sinyalleri görünür oluyor.">
+              <span class="checkpoint-index">02</span>
+              <div>
+                <p class="eyebrow">Join</p>
+                <h3>Mesaj karmaşası yerine net hazırlık.</h3>
+                <p>Koşu öncesi katılım sinyalleri tek yüzeyde toplanır; insanlar gelmeden önce birbirini hisseder.</p>
+              </div>
+            </article>
+
+            <article id="kulupler" class="route-checkpoint route-step reveal-up" data-route-step="3" data-route-label="Belong" data-route-title="Tek koşu topluluk ritmine dönüşüyor" data-route-copy="Kulüp için görünürlük güçleniyor; kullanıcı için bir sonraki koşuya geri dönmek doğal hale geliyor.">
+              <span class="checkpoint-index">03</span>
+              <div>
+                <p class="eyebrow">Belong</p>
+                <h3>Kulüp ritmi daha sürdürülebilir hale gelir.</h3>
+                <p>İlk katılım bir ilişki başlangıcına döner; seri koşular ve kulüp akışı daha kontrollü ilerler.</p>
+              </div>
+            </article>
+
+            <article id="cta" class="route-checkpoint route-step reveal-up route-checkpoint-cta" data-route-step="4" data-route-label="CTA" data-route-title="Rota demo noktasında tamamlanıyor" data-route-copy="Hero’da başlayan çizgi burada kapanır: keşif, katılım ve devamlılık artık tek üründe toplanır.">
+              <span class="checkpoint-index">04</span>
+              <div>
+                <p class="eyebrow">CTA</p>
+                <h3>Bu akışı kulübüne taşı.</h3>
+                <p>Ruconn’u sahada birlikte keskinleştirmek için demo planlayalım.</p>
+                <div class="cta-actions checkpoint-actions">
+                  <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo planla</a>
+                  <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Erken%20Erişim">Erken erişim iste</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why-section">
         <div class="why-grid">
           <article class="why-card why-card-large reveal-up feature-card">
             <span>01 · Koşucu</span>
@@ -145,7 +217,7 @@ app.innerHTML = `
         </div>
       </section>
 
-      <section id="deneyim" class="section experience-section">
+      <section class="section experience-section">
         <div class="section-heading reveal-up narrow">
           <p class="eyebrow">Deneyim akışı</p>
           <h2>Üç net adım. Tek premium akış.</h2>
@@ -187,38 +259,6 @@ app.innerHTML = `
         </div>
       </section>
 
-      <section id="kulupler" class="section clubs-section">
-        <div class="clubs-layout">
-          <div class="clubs-copy reveal-up">
-            <p class="eyebrow">Kulüpler için</p>
-            <h2>Daha net görünürlük. Daha az sürtünme.</h2>
-            <p>Ruconn, kulüplerin etkinlik yayını, topluluk devamlılığı ve operasyon akışını tek yüzeyde toplar.</p>
-          </div>
-
-          <div class="clubs-grid">
-            <article class="clubs-card reveal-up">
-              <small>Community</small>
-              <h3>Yeni geleni içeride tut</h3>
-              <p>İlk katılımı tekrar eden ilişkiye çevir.</p>
-            </article>
-            <article class="clubs-card reveal-up">
-              <small>Events</small>
-              <h3>Akışı tekrar kurulabilir yap</h3>
-              <p>Seri koşular ve özel buluşmalar tek ritimde ilerler.</p>
-            </article>
-            <article class="clubs-card reveal-up">
-              <small>Operations</small>
-              <h3>Mesaj kaosunu azalt</h3>
-              <p>Duyuru ve katılım daha yönetilebilir hale gelir.</p>
-            </article>
-            <article class="clubs-card quote-card reveal-up">
-              <p>“Sahada hızlı, operasyonda temiz.”</p>
-              <span>Ruconn prensibi</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="section metrics-section">
         <div class="metrics-panel reveal-up">
           <div class="metrics-copy">
@@ -242,19 +282,6 @@ app.innerHTML = `
           </div>
         </div>
       </section>
-
-      <section id="cta" class="cta section reveal-up">
-        <div>
-          <p class="eyebrow">Erken erişim / Demo</p>
-          <h2>Kulübünü daha dinamik bir akışa taşı.</h2>
-          <p>Ruconn’u sahada birlikte keskinleştirmek için demo planlayalım.</p>
-        </div>
-
-        <div class="cta-actions">
-          <a class="button button-primary" href="mailto:hello@ruconn.com?subject=Ruconn%20Demo%20Talebi">Demo planla</a>
-          <a class="button button-secondary" href="mailto:hello@ruconn.com?subject=Ruconn%20Erken%20Erişim">Erken erişim iste</a>
-        </div>
-      </section>
     </main>
   </div>
 `
@@ -263,126 +290,186 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 
 const setupRouteScene = () => {
   const canvas = document.querySelector('#route-canvas')
-  if (!canvas) return null
+  const shell = document.querySelector('.route-stage-shell')
+  const progressBar = document.querySelector('#route-progress-bar')
+  const progressValue = document.querySelector('#route-progress-value')
+  const overlayLabel = document.querySelector('#route-overlay-label')
+  const overlayTitle = document.querySelector('#route-overlay-title')
+  const overlayCopy = document.querySelector('#route-overlay-copy')
+  const checkpointBadges = [...document.querySelectorAll('#route-overlay-checkpoints span')]
+
+  if (!canvas || !shell) return null
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true })
+  renderer.setClearColor(0x000000, 0)
+
   const scene = new THREE.Scene()
-  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100)
-  camera.position.set(0, 0.8, 8.5)
+  const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100)
+  camera.position.set(0, 1.2, 9.5)
 
   const sizes = { width: 0, height: 0 }
-  const container = canvas.parentElement
+  const state = {
+    progress: 0,
+    visualProgress: 0,
+    checkpoint: 0
+  }
 
   const routePoints = [
-    new THREE.Vector3(-4.8, -1.5, -2.2),
-    new THREE.Vector3(-3.2, -0.2, -1.1),
-    new THREE.Vector3(-1.6, 1.4, 0.2),
-    new THREE.Vector3(0.2, 0.4, 1.2),
-    new THREE.Vector3(1.7, -1.0, 0.6),
-    new THREE.Vector3(3.4, 1.3, -0.4),
-    new THREE.Vector3(4.8, 0.2, -1.6)
+    new THREE.Vector3(-5.1, -1.6, -2.4),
+    new THREE.Vector3(-3.8, -0.7, -1.7),
+    new THREE.Vector3(-2.6, 0.8, -0.8),
+    new THREE.Vector3(-1.1, 1.55, 0.2),
+    new THREE.Vector3(0.7, 0.35, 1.25),
+    new THREE.Vector3(2.0, -1.25, 0.65),
+    new THREE.Vector3(3.55, -0.35, -0.55),
+    new THREE.Vector3(5.15, 1.15, -1.75)
   ]
 
-  const curve = new THREE.CatmullRomCurve3(routePoints)
-  const curvePoints = curve.getPoints(240)
+  const curve = new THREE.CatmullRomCurve3(routePoints, false, 'catmullrom', 0.45)
+  const curvePoints = curve.getPoints(320)
+
   const routeGeometry = new THREE.BufferGeometry().setFromPoints(curvePoints)
-  const routeMaterial = new THREE.LineBasicMaterial({ color: 0x7fff3a, transparent: true, opacity: 0.95 })
-  const routeLine = new THREE.Line(routeGeometry, routeMaterial)
+  routeGeometry.setDrawRange(0, 2)
+
+  const routeLine = new THREE.Line(
+    routeGeometry,
+    new THREE.LineBasicMaterial({ color: 0x7fff3a, transparent: true, opacity: 0.92 })
+  )
   scene.add(routeLine)
 
-  const ghostGeometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(120))
-  const ghostMaterial = new THREE.PointsMaterial({ color: 0x1e3a5f, size: 0.08, transparent: true, opacity: 0.9 })
-  const ghostTrail = new THREE.Points(ghostGeometry, ghostMaterial)
-  scene.add(ghostTrail)
+  const ghostLine = new THREE.Line(
+    new THREE.BufferGeometry().setFromPoints(curve.getPoints(180)),
+    new THREE.LineBasicMaterial({ color: 0x8cabd1, transparent: true, opacity: 0.14 })
+  )
+  scene.add(ghostLine)
 
-  const ringGeometry = new THREE.TorusGeometry(0.72, 0.02, 16, 120)
-  const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x7fff3a, transparent: true, opacity: 0.18 })
-  const ring = new THREE.Mesh(ringGeometry, ringMaterial)
-  ring.rotation.x = 1.2
-  ring.position.set(-0.8, 0.2, -0.8)
-  scene.add(ring)
+  const checkpointGroup = new THREE.Group()
+  scene.add(checkpointGroup)
 
-  const pulseGeometry = new THREE.SphereGeometry(0.16, 24, 24)
-  const pulseMaterial = new THREE.MeshBasicMaterial({ color: 0x7fff3a })
-  const runner = new THREE.Mesh(pulseGeometry, pulseMaterial)
+  const checkpoints = routePoints.map((point, index) => {
+    const ring = new THREE.Mesh(
+      new THREE.RingGeometry(0.13, 0.19, 42),
+      new THREE.MeshBasicMaterial({ color: index === 4 ? 0xffffff : 0x7fff3a, transparent: true, opacity: 0.38, side: THREE.DoubleSide })
+    )
+    ring.position.copy(point)
+    ring.lookAt(camera.position)
+
+    const core = new THREE.Mesh(
+      new THREE.SphereGeometry(index === 4 ? 0.12 : 0.09, 20, 20),
+      new THREE.MeshBasicMaterial({ color: index === 4 ? 0xffffff : 0x7fff3a, transparent: true, opacity: index === 0 ? 1 : 0.4 })
+    )
+    core.position.copy(point)
+
+    checkpointGroup.add(ring, core)
+    return { ring, core }
+  })
+
+  const runner = new THREE.Mesh(
+    new THREE.SphereGeometry(0.16, 26, 26),
+    new THREE.MeshPhysicalMaterial({
+      color: 0xffffff,
+      emissive: 0x7fff3a,
+      emissiveIntensity: 1.6,
+      roughness: 0.16,
+      metalness: 0.04,
+      transparent: true,
+      opacity: 0.96
+    })
+  )
   scene.add(runner)
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8)
-  scene.add(ambientLight)
+  const halo = new THREE.Mesh(
+    new THREE.TorusGeometry(0.44, 0.018, 18, 120),
+    new THREE.MeshBasicMaterial({ color: 0x7fff3a, transparent: true, opacity: 0.24 })
+  )
+  halo.rotation.x = Math.PI / 2
+  scene.add(halo)
 
-  const pointLight = new THREE.PointLight(0x7fff3a, 14, 30, 2)
-  pointLight.position.set(1.4, 2.4, 3.2)
-  scene.add(pointLight)
-
-  const secondaryLight = new THREE.PointLight(0x1e3a5f, 12, 24, 2)
-  secondaryLight.position.set(-3.2, -1.8, 2.6)
-  scene.add(secondaryLight)
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.18)
+  const keyLight = new THREE.PointLight(0x7fff3a, 18, 40, 2)
+  keyLight.position.set(1.8, 3.2, 4.4)
+  const fillLight = new THREE.PointLight(0x1e3a5f, 14, 36, 2)
+  fillLight.position.set(-4.5, -1.8, 2.8)
+  scene.add(ambientLight, keyLight, fillLight)
 
   const resize = () => {
-    sizes.width = container.clientWidth
-    sizes.height = container.clientHeight
+    sizes.width = shell.clientWidth
+    sizes.height = shell.clientHeight
     renderer.setSize(sizes.width, sizes.height, false)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
   }
 
+  const setOverlay = ({ label, title, copy, index }) => {
+    overlayLabel.textContent = label
+    overlayTitle.textContent = title
+    overlayCopy.textContent = copy
+    checkpointBadges.forEach((badge, badgeIndex) => {
+      badge.classList.toggle('is-active', badgeIndex === index)
+      badge.classList.toggle('is-passed', badgeIndex < index)
+    })
+  }
+
+  const setProgress = (progress) => {
+    state.progress = gsap.utils.clamp(0, 1, progress)
+    progressBar.style.transform = `scaleX(${Math.max(0.02, state.progress)})`
+    progressValue.textContent = `${String(Math.round(state.progress * 100)).padStart(2, '0')}%`
+  }
+
   resize()
   window.addEventListener('resize', resize)
 
-  const clock = new THREE.Clock()
-  const state = { progress: 0 }
+  const render = () => {
+    state.visualProgress += (state.progress - state.visualProgress) * (reducedMotion ? 1 : 0.08)
 
-  if (!reducedMotion) {
-    gsap.to(state, {
-      progress: 1,
-      duration: 4.6,
-      repeat: -1,
-      ease: 'none'
+    const currentPoint = curve.getPointAt(state.visualProgress)
+    const nextPoint = curve.getPointAt(Math.min(0.999, state.visualProgress + 0.01))
+
+    runner.position.copy(currentPoint)
+    runner.lookAt(nextPoint)
+    halo.position.copy(currentPoint)
+
+    const count = Math.max(2, Math.floor(state.visualProgress * curvePoints.length))
+    routeGeometry.setDrawRange(0, count)
+
+    checkpoints.forEach(({ ring, core }, index) => {
+      const checkpointProgress = index / (checkpoints.length - 1)
+      const active = state.visualProgress >= checkpointProgress - 0.02
+      core.material.opacity = active ? 1 : 0.32
+      ring.material.opacity = active ? 0.84 : 0.2
+      ring.scale.setScalar(active ? 1.12 : 1)
+      ring.lookAt(camera.position)
     })
 
-    gsap.to(camera.position, {
-      z: 7.8,
-      y: 1.05,
-      duration: 3.8,
-      repeat: -1,
-      yoyo: true,
-      ease: 'sine.inOut'
-    })
+    routeLine.rotation.z = THREE.MathUtils.lerp(routeLine.rotation.z, (state.visualProgress - 0.5) * 0.18, 0.06)
+    ghostLine.rotation.z = THREE.MathUtils.lerp(ghostLine.rotation.z, (0.5 - state.visualProgress) * 0.12, 0.06)
+    checkpointGroup.rotation.z = THREE.MathUtils.lerp(checkpointGroup.rotation.z, (state.visualProgress - 0.5) * 0.1, 0.05)
+    keyLight.intensity = 15 + state.visualProgress * 6
+    halo.rotation.z += reducedMotion ? 0 : 0.006
 
-    gsap.to(ring.rotation, {
-      z: Math.PI * 2,
-      duration: 10,
-      repeat: -1,
-      ease: 'none'
-    })
-  } else {
-    state.progress = 0.22
+    camera.position.x = THREE.MathUtils.lerp(camera.position.x, (state.visualProgress - 0.5) * 1.2, 0.04)
+    camera.position.y = THREE.MathUtils.lerp(camera.position.y, 1 + state.visualProgress * 0.5, 0.04)
+    camera.position.z = THREE.MathUtils.lerp(camera.position.z, 9.5 - state.visualProgress * 1.4, 0.04)
+    camera.lookAt(0.1, 0.1, 0)
+
+    renderer.render(scene, camera)
   }
 
-  renderer.setAnimationLoop(() => {
-    const elapsed = clock.getElapsedTime()
-    const p = curve.getPointAt(state.progress % 1)
-    runner.position.copy(p)
+  renderer.setAnimationLoop(render)
 
-    const next = curve.getPointAt((state.progress + 0.015) % 1)
-    runner.lookAt(next)
-
-    routeLine.rotation.z = Math.sin(elapsed * 0.18) * 0.08
-    ghostTrail.rotation.z = -Math.sin(elapsed * 0.22) * 0.12
-    ghostTrail.rotation.x = Math.cos(elapsed * 0.16) * 0.08
-    ring.position.y = 0.2 + Math.sin(elapsed * 1.4) * 0.16
-    pointLight.intensity = 12 + Math.sin(elapsed * 2.1) * 2
-    secondaryLight.intensity = 9 + Math.cos(elapsed * 1.6) * 2
-
-    camera.lookAt(0, 0, 0)
-    renderer.render(scene, camera)
+  setProgress(0)
+  setOverlay({
+    label: 'Start',
+    title: 'Şehir açılıyor',
+    copy: 'Kullanıcı ilk ekranda doğru koşuyu hissediyor; rota daha başlamadan netleşiyor.',
+    index: 0
   })
 
-  return { renderer, scene }
+  return { setProgress, setOverlay }
 }
 
-setupRouteScene()
+const routeScene = setupRouteScene()
 
 if (!reducedMotion) {
   gsap.from('.topbar', {
@@ -471,6 +558,40 @@ if (!reducedMotion) {
   })
 
   ScrollTrigger.create({
+    trigger: document.body,
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: 0.6,
+    onUpdate: (self) => {
+      routeScene?.setProgress(self.progress)
+    }
+  })
+
+  gsap.utils.toArray('.route-step').forEach((step) => {
+    ScrollTrigger.create({
+      trigger: step,
+      start: 'top center',
+      end: 'bottom center',
+      onEnter: () => {
+        routeScene?.setOverlay({
+          label: step.dataset.routeLabel,
+          title: step.dataset.routeTitle,
+          copy: step.dataset.routeCopy,
+          index: Number(step.dataset.routeStep)
+        })
+      },
+      onEnterBack: () => {
+        routeScene?.setOverlay({
+          label: step.dataset.routeLabel,
+          title: step.dataset.routeTitle,
+          copy: step.dataset.routeCopy,
+          index: Number(step.dataset.routeStep)
+        })
+      }
+    })
+  })
+
+  ScrollTrigger.create({
     trigger: '.experience-stack',
     start: 'top 75%',
     end: 'bottom 75%',
@@ -480,4 +601,6 @@ if (!reducedMotion) {
       gsap.to('.experience-card-c', { y: self.progress * -32, duration: 0.35, overwrite: 'auto' })
     }
   })
+} else {
+  routeScene?.setProgress(0.22)
 }
