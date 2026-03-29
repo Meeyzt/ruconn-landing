@@ -31,9 +31,9 @@ app.innerHTML = `
       <section id="hero" class="hero section route-step" data-route-step="0" data-route-label="Ruconn" data-route-title="Topluluk operasyonu tek yüzeyde" data-route-copy="Etkinliği yayınlamak, katılımı görmek, duyuruları yönetmek ve üyeyi geri getirmek aynı ürün akışında birleşir.">
         <div class="hero-copy reveal-up">
           <p class="eyebrow">Koşu kulüpleri ve yürüyüş toplulukları için community operations platformu</p>
-          <h1>Koşu kulübünüzün etkinlik, koordinasyon ve katılım akışını tek yerde yönetin.</h1>
+          <h1>Etkinliği daha net yayınlayın, koordinasyonu sakinleştirin.</h1>
           <p class="hero-text">
-            Ruconn; koşu kulüpleri, yürüyüş toplulukları ve event ekipleri için etkinlik discovery, organizasyon iletişimi ve tekrar katılım sürecini tek premium yüzeyde birleştirir.
+            Ruconn; discovery, organizasyon iletişimi ve tekrar katılımı tek akışta birleştirir.
           </p>
 
           <div class="hero-actions">
@@ -68,16 +68,33 @@ app.innerHTML = `
               <span>İstanbul · club mode</span>
             </div>
 
-            <div class="hero-heroic-copy">
+            <div class="hero-heroic-copy hero-heroic-copy-compact">
               <span>Discovery → coordination → retention</span>
               <strong>Her etkinlik bir sonraki katılımı da hazırlar.</strong>
             </div>
 
-            <div class="route-overlay" aria-hidden="true">
+            <div class="hero-mini-path" aria-hidden="true">
+              <div class="hero-mini-path-head">
+                <span>CLUB FLOW</span>
+                <span>weekly rhythm</span>
+              </div>
+              <div class="hero-mini-path-line">
+                <span class="hero-mini-dot is-active"></span>
+                <span class="hero-mini-dot"></span>
+                <span class="hero-mini-dot"></span>
+              </div>
+              <div class="hero-mini-path-steps">
+                <span>Yayınla</span>
+                <span>Koordine et</span>
+                <span>Geri getir</span>
+              </div>
+            </div>
+
+            <div class="route-overlay route-overlay-compact" aria-hidden="true">
               <div class="route-overlay-copy">
                 <small id="route-overlay-label">Ruconn</small>
                 <strong id="route-overlay-title">Topluluk operasyonu tek yüzeyde</strong>
-                <p id="route-overlay-copy">Etkinliği yayınlamak, katılımı görmek, duyuruları yönetmek ve üyeyi geri getirmek aynı ürün akışında birleşir.</p>
+                <p id="route-overlay-copy">Etkinliği yayınlamak, katılımı görmek ve üyeyi geri getirmek aynı akışta birleşir.</p>
               </div>
               <div class="route-overlay-progress">
                 <div class="route-progress-meta">
@@ -86,33 +103,6 @@ app.innerHTML = `
                 </div>
                 <div class="route-progress-track"><span id="route-progress-bar"></span></div>
               </div>
-              <div class="route-overlay-checkpoints" id="route-overlay-checkpoints">
-                <span class="is-active">Platform</span>
-                <span>Discovery</span>
-                <span>Coordination</span>
-                <span>Event day</span>
-                <span>Retention</span>
-              </div>
-            </div>
-
-            <div class="hero-panel hero-panel-bottom">
-              <div>
-                <small>Organizer value</small>
-                <strong>Daha az mesaj karmaşası, daha öngörülebilir katılım</strong>
-              </div>
-              <div>
-                <small>Member value</small>
-                <strong>Nereye, kimlerle, hangi tempoda geleceğini önceden bilir</strong>
-              </div>
-            </div>
-
-            <div class="hero-float-card hero-float-a">
-              <small>CLUBS</small>
-              <strong>Haftalık akışı daha görünür ve tekrar edilebilir kılar</strong>
-            </div>
-            <div class="hero-float-card hero-float-b">
-              <small>EVENTS</small>
-              <strong>Tek buluşmayı kalıcı topluluk ritmine bağlar</strong>
             </div>
           </div>
         </div>
@@ -232,12 +222,12 @@ app.innerHTML = `
             <div class="journey-badge">01</div>
             <div class="journey-card">
               <p class="eyebrow">Discovery</p>
-              <h3>Koşuyu anlatmak için ekstra efor harcamayın.</h3>
-              <p>Ruconn; kulübün haftalık koşusunu, beginner walk’unu veya özel partner etkinliğini açık, güven veren ve karar verdirtici bir çerçevede sunar.</p>
+              <h3>Etkinlik ne, kimin için, hangi tempoda; ilk bakışta anlaşılır.</h3>
+              <p>Haftalık kulüp koşusu, beginner walk ya da partnerli özel etkinlik fark etmeksizin; format, rota ve seviye tek bakışta netleşir.</p>
               <ul>
-                <li>Rota, pace ve seviye bilgisi net görünür.</li>
-                <li>Yeni katılımcı için giriş bariyeri düşer.</li>
-                <li>Kulüp tonu ve etkinlik formatı daha doğru aktarılır.</li>
+                <li>Rota, pace ve seviye bilgisi tek yerde görünür.</li>
+                <li>Yeni katılımcı kararını daha hızlı verir.</li>
+                <li>Etkinlik yanlış beklenti üretmeden anlatılır.</li>
               </ul>
             </div>
           </article>
@@ -246,12 +236,12 @@ app.innerHTML = `
             <div class="journey-badge">02</div>
             <div class="journey-card">
               <p class="eyebrow">Coordination</p>
-              <h3>Organizasyon günü, mesaj takibiyle yorulmaz.</h3>
-              <p>Etkinlik öncesi gelen sorular, hatırlatmalar, toplanma bilgileri ve son dakika değişiklikleri daha düzenli akar; ekip daha sakin çalışır.</p>
+              <h3>Hazırlık süreci ayrı mesajlara bölünmeden akar.</h3>
+              <p>Katılım sinyalleri, hatırlatmalar, toplanma noktası ve son dakika güncellemeleri tek akışta kaldığında ekip daha sakin çalışır.</p>
               <ul>
-                <li>Katılım sinyalleri daha öngörülebilir olur.</li>
-                <li>Önemli güncellemeler kaybolmaz.</li>
-                <li>Organizatör ekibi tekrar eden açıklamaları azaltır.</li>
+                <li>Kim geliyor sorusu daha net cevaplanır.</li>
+                <li>Kritik güncellemeler chat içinde kaybolmaz.</li>
+                <li>Tekrarlayan açıklama yükü azalır.</li>
               </ul>
             </div>
           </article>
@@ -260,12 +250,12 @@ app.innerHTML = `
             <div class="journey-badge">03</div>
             <div class="journey-card">
               <p class="eyebrow">Event day</p>
-              <h3>Toplanma anı daha net, deneyim daha akıcı.</h3>
-              <p>Running crew, morning walk grubu ya da markalı community event fark etmeksizin; etkinlik günü belirsizlik azalır, karşılama hissi güçlenir.</p>
+              <h3>Etkinlik günü daha az sürtünmeyle başlar.</h3>
+              <p>Koşu ekibi, walking group ya da markalı community event fark etmeksizin; katılımcı neyle karşılaşacağını bilir, ekip daha kontrollü ilerler.</p>
               <ul>
-                <li>Nerede buluşulacağı ve format daha anlaşılırdır.</li>
-                <li>Katılımcı deneyimi daha güvenli ve düzenli hissedilir.</li>
-                <li>İlk kez gelen üyeler topluluğa daha kolay karışır.</li>
+                <li>Buluşma bilgisi daha net hissedilir.</li>
+                <li>Yeni gelen için ilk deneyim daha güven verir.</li>
+                <li>Ekip saha gününde daha az açıklama yapar.</li>
               </ul>
             </div>
           </article>
@@ -274,12 +264,12 @@ app.innerHTML = `
             <div class="journey-badge">04</div>
             <div class="journey-card journey-card-accent">
               <p class="eyebrow">Retention</p>
-              <h3>İyi etkinlik, tek seferlik kalmaz.</h3>
-              <p>Etkinlik bittiğinde bağ kopmaz. Kulüp iletişimi sürer, içerik ve geri dönüşler birikir, bir sonraki buluşmaya dönmek daha doğal hale gelir.</p>
+              <h3>İyi deneyim bir sonraki katılımı da hazırlar.</h3>
+              <p>Etkinlik bittikten sonra bağ tamamen dağılmaz. Topluluk hafızası güçlenir ve bir sonraki buluşmaya dönmek daha doğal hale gelir.</p>
               <ul>
-                <li>Tekrar katılım için sıcak zemin oluşur.</li>
-                <li>Topluluk hafızası sadece chat içinde kaybolmaz.</li>
-                <li>Kulüpler daha düzenli bir ritim kurabilir.</li>
+                <li>Bir sonraki etkinliğe dönüş eşiği düşer.</li>
+                <li>Topluluk hafızası daha görünür kalır.</li>
+                <li>Kulüp ritmi daha sürdürülebilir olur.</li>
               </ul>
             </div>
           </article>
