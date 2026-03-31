@@ -425,7 +425,9 @@ function animate() {
   camera.position.x += (targetX - camera.position.x) * 0.035
   camera.position.y += (targetY - camera.position.y) * 0.035
   camera.position.z += (targetZ - camera.position.z) * 0.035
-  camera.lookAt(0, 0, 0)
+
+  const lookAtX = -2.8 * Math.max(0, 1 - scrollSmooth * 3)
+  camera.lookAt(lookAtX, 0, 0)
 
   if (hoveredNode) {
     const wp = new THREE.Vector3()
@@ -584,6 +586,15 @@ window.addEventListener('pointermove', (e) => {
 
   pointer.x = (e.clientX / window.innerWidth) * 2 - 1
   pointer.y = -(e.clientY / window.innerHeight) * 2 + 1
+
+  const topEl = document.elementFromPoint(e.clientX, e.clientY)
+  const overOpaqueSections = topEl?.closest('.manifesto, .features, .journey, .audiences, .site-footer, .nav')
+
+  if (overOpaqueSections) {
+    hoveredNode = null
+    document.body.style.cursor = ''
+    return
+  }
 
   raycaster.setFromCamera(pointer, camera)
   const hits = raycaster.intersectObjects(hitMeshes)
